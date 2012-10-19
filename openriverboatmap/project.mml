@@ -561,34 +561,6 @@
       "srs-name": "900913"
     },
     {
-      "geometry": "point",
-      "extent": [
-        2.8810400000000094,
-        46.19937189999996,
-        5.315842499999988,
-        48.28980949999994
-      ],
-      "Datasource": {
-        "type": "postgis",
-        "table": "( SELECT geometry, name,  harbour\n  FROM osm_marinas\n) AS data",
-        "key_field": "",
-        "geometry_field": "geometry",
-        "extent_cache": "auto",
-        "extent": "320715.905755054,5812356.47268691,591756.880237241,6155204.94966457",
-        "dbname": "osm",
-        "user": "osm",
-        "id": "marinas",
-        "project": "OpenRiverboatMap",
-        "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over"
-      },
-      "id": "marinas",
-      "class": "",
-      "srs-name": "900913",
-      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
-      "advanced": {},
-      "name": "marinas"
-    },
-    {
       "geometry": "linestring",
       "extent": [
         3.0501998367828316,
@@ -736,6 +708,34 @@
         48.38062075691328
       ],
       "advanced": {}
+    },
+    {
+      "geometry": "point",
+      "extent": [
+        2.8810400000000094,
+        46.19937189999996,
+        5.315842500000014,
+        48.28980949999994
+      ],
+      "Datasource": {
+        "type": "postgis",
+        "table": "( SELECT geometry, name,  harbour\n  FROM osm_marinas\n) AS data",
+        "key_field": "",
+        "geometry_field": "geometry",
+        "extent_cache": "auto",
+        "extent": "320715.905755054,5812356.47268691,591756.880237244,6155204.94966457",
+        "dbname": "osm",
+        "user": "osm",
+        "id": "marinas",
+        "project": "OpenRiverboatMap",
+        "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over"
+      },
+      "id": "marinas",
+      "class": "",
+      "srs-name": "900913",
+      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+      "advanced": {},
+      "name": "marinas"
     },
     {
       "geometry": "point",

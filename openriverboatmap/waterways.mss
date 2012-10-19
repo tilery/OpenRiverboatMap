@@ -50,7 +50,7 @@ Map { background-color: @water; }
 /* MARINAS
 /* ================================================================== */
 
-#marinas[harbour=1][zoom>=7][zoom<=14] {
+/*#marinas[harbour=1][zoom>=7][zoom<=14] {
   marker-width: 20;
   marker-height: 20;
   marker-file: url("icons/harbour.svg");
@@ -60,7 +60,7 @@ Map { background-color: @water; }
   marker-file: url("icons/marina.svg");
   marker-width: 20;
   marker-height: 20;
-}
+}*/
 
 /* ================================================================== */
 /* MOORING

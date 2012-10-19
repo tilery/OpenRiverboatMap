@@ -151,6 +151,12 @@ Map { font-directory: url(./fonts); }
 @village_text:      #888;
 @village_halo:      @place_halo;
 
+@harbour_text:         #444;
+@harbour_halo:         @place_halo;
+
+@marina_text:         #666;
+@marina_halo:         @place_halo;
+
 /* ****************************************************************** */
 
 

@@ -1,3 +1,5 @@
+# -*- coding: utf-8 -*-
+
 # Copyright 2011 Omniscale (http://omniscale.com)
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
@@ -12,8 +14,10 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
+import re
+
 from imposm.mapping import (
-    Options,
+    Options, Name,
     Points, LineStrings, Polygons,
     String, Bool, Integer, OneOfInt,
     WayZOrder, ZOrder, Direction,
@@ -51,6 +55,63 @@ db_conf = Options(
     prefix='osm_new_',
     proj='epsg:900913',
 )
+
+
+# ################## #
+# Custom field types
+# ################## #
+
+
+class CleanedName(Name):
+    """
+    Base class for fields that clean input string at run time.
+    """
+
+    # List of string to remove or tuple ("remove this", "replace by this")
+    # The string to remove can be a regex
+    filter_out_substrings = []
+
+    def value(self, val, osm_elem):
+        val = super(CleanedName, self).value(val, osm_elem)
+        if not val:
+            return ""
+        for _filter in self.filter_out_substrings:
+            if isinstance(_filter, tuple):
+                _filter, _replace_by = _filter
+            else:
+                _replace_by = ""
+            val = re.sub(_filter, _replace_by, val, flags=re.IGNORECASE)
+        return val
+
+
+class MarinaName(CleanedName):
+    filter_out_substrings = [
+        "port de plaisance (de |du |d'|des )?",
+        "port (de |du |d'|des )?",
+        "halte nautique (de |du |d'|des )?",
+        "halte fluviale (de |du |d'|des )?",
+        "halte (de |du |d'|des )?",
+    ]
+
+    def __init__(self, coalesce=['name', 'int_name']):
+        """
+        Make possible to populate name from serveral tags (take the first
+        with a non empty value).
+        """
+        self.coalesce_keys = coalesce
+
+    def value(self, val, osm_elem):
+        print "coalesce_keys", self.coalesce_keys
+        for key in self.coalesce_keys:
+            print "key", key
+            val = osm_elem.tags.get(key)
+            print "val before super", val
+            val = super(MarinaName, self).value(val, osm_elem)
+            print "val after super", val
+            if val:
+                return val
+        osm_elem.name = ""
+        return ""
 
 
 class Highway(LineStrings):
@@ -245,7 +306,7 @@ waterways = LineStrings(
         ('tunnel', Bool()),
         ('motorboat', Bool()),
         ('lock', Bool()),
-        ('CEMT', String()),
+        ('cemt', String()),
     ),
 )
 
@@ -267,6 +328,7 @@ marinas = Points(
     },
     fields=(
         ("harbour", Bool()),
+        ("name", MarinaName(coalesce=['harbour:namenational', 'name', 'int_name'])),
     )
 )
 
@@ -289,7 +351,7 @@ waterareas = Polygons(
     fields=(
         ('area', PseudoArea()),
         ('motorboat', Bool()),
-        ('CEMT', String()),
+        ('cemt', String()),
     ),
     mapping={
         'waterway': ('riverbank', 'lock'),

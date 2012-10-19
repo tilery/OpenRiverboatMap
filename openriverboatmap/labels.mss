@@ -87,7 +87,7 @@
 
 /* ---- Cities ------------------------------------------------------ */
 
-#place::city[type='city'][zoom>=6][zoom<=15] {
+#place::city[type='city'][zoom>=10][zoom<=15] {
   text-name:'[name]';
   text-face-name:@sans;
   text-placement:point;
@@ -138,7 +138,7 @@
 
 /* ---- Towns ------------------------------------------------------- */
 
-#place::town[type='town'][zoom>=9][zoom<=17] {
+#place::town[type='town'][zoom>=12][zoom<=17] {
   text-name:'[name]';
   text-face-name:@sans;
   text-placement:point;
@@ -440,6 +440,34 @@
   [oneway=-1] { marker-file: url("icons/oneway-reverse.svg"); }
   [zoom=16] { marker-transform: "scale(0.5)"; }
   [zoom=17] { marker-transform: "scale(0.75)"; }
+}
+
+
+/* ================================================================== */
+/* HARBOURS / MARINAS
+/* ================================================================== */
+
+#marinas[harbour=1][zoom>=7][zoom<=14] {
+  text-name:'"⚓ " + [name]';
+  text-face-name:@sans;
+  text-placement:point;
+  text-fill:@harbour_text;
+  text-halo-fill:@harbour_halo;
+  text-halo-radius:2;
+  text-size:12;
+  text-label-position-tolerance: 10;
+}
+
+#marinas[harbour=0][zoom>=10][zoom<=14] {
+  text-name:'"⚑ " + [name]';
+  text-face-name:@sans;
+  text-placement:point;
+  text-fill:@marina_text;
+  text-size:11;
+  text-halo-fill:@marina_halo;
+  text-halo-radius:2;
+  text-wrap-width: 50;
+  text-label-position-tolerance: 10;
 }
 
 
