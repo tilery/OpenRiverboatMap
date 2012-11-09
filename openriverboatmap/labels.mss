@@ -469,7 +469,7 @@
 }
 
 #locks::label[zoom>=16] {
-  text-name: "[lock_name]";
+  text-name: "'⇅ ' + [lock_name]";
   text-face-name:@sans;
   text-placement:point;
   text-fill:@marina_text;
