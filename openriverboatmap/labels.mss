@@ -468,7 +468,7 @@
   text-label-position-tolerance: 10;
 }
 
-#locks::label[zoom>16] {
+#locks::label[zoom>=16] {
   text-name: "[lock_name]";
   text-face-name:@sans;
   text-placement:point;
