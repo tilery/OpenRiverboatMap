@@ -468,5 +468,15 @@
   text-label-position-tolerance: 10;
 }
 
-
+#locks::label[zoom>16] {
+  text-name: "[lock_name]";
+  text-face-name:@sans;
+  text-placement:point;
+  text-fill:@marina_text;
+  text-size:11;
+  text-halo-fill:@marina_halo;
+  text-halo-radius:2;
+  text-wrap-width: 50;
+  text-label-position-tolerance: 10;
+}
 /* ****************************************************************** */
