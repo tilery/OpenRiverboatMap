@@ -1,5 +1,5 @@
 /* ****************************************************************** */
-/* OSM BRIGHT for Imposm                                              */
+/* OSM BRIGHT for Osm2pgsql                                           */
 /* ****************************************************************** */
 
 /* For basic style customization you can simply edit the colors and

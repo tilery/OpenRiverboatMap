@@ -1,7 +1,7 @@
 Map { background-color: @water; }
 
 #waterway_low[zoom>=5][zoom<=12] {
-  [motorboat=1] { line-color: @navigable; }
+  [motorboat='yes'] { line-color: @navigable; }
   [zoom=5] {
     [type='river'] { line-width: 0.5; }
     [type='canal'] { line-width: 0.25; } }
@@ -41,8 +41,8 @@ Map { background-color: @water; }
 #water_gen0[zoom>3][zoom<=9],
 #water_gen1[zoom>9][zoom<=12],
 #water[zoom>5] {
-  [motorboat=0] { polygon-fill: @water;}
-  [motorboat=1] { polygon-fill: @navigable;}
+  polygon-fill: @water;
+  [motorboat='yes'] { polygon-fill: @navigable;}
   [zoom>=14][type='lock'] { line-color: @stone;}
 }
 
@@ -66,7 +66,7 @@ Map { background-color: @water; }
 /* MOORING
 /* ================================================================== */
 
-#mooring[zoom>=14] {
+#moorings[zoom>=14] {
 	line-color: @mooring;
   [zoom=14] {
     line-width: 2;

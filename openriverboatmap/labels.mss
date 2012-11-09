@@ -350,11 +350,9 @@
 #waterway_label[type='river'][zoom>=13],
 #waterway_label[type='canal'][zoom>=15],
 #waterway_label[type='stream'][zoom>=17] {
-  [motorboat=0] {
-    text-fill: @water * 0.75;
-    text-halo-fill: fadeout(lighten(@water,5%),25%);
-  }
-  [motorboat=1] {
+  text-fill: @water * 0.75;
+  text-halo-fill: fadeout(lighten(@water,5%),25%);
+  [motorboat='yes'] {
     text-fill: #fff * 0.75;
     text-halo-fill: fadeout(lighten(@navigable,5%),25%);
   }
@@ -447,8 +445,8 @@
 /* HARBOURS / MARINAS
 /* ================================================================== */
 
-#marinas[harbour=1][zoom>=7][zoom<=14] {
-  text-name:'"⚓ " + [name]';
+#marinas[harbour=true][zoom>=7][zoom<=14] {
+  text-name:"'⚓ ' + [name].replace('[Pp]ort (de [Pp]laisance )?(de |du |d\')?','')";
   text-face-name:@sans;
   text-placement:point;
   text-fill:@harbour_text;
@@ -458,8 +456,8 @@
   text-label-position-tolerance: 10;
 }
 
-#marinas[harbour=0][zoom>=10][zoom<=14] {
-  text-name:'"⚑ " + [name]';
+#marinas[harbour=null][zoom>=10][zoom<=14] {
+  text-name:"'⚑ ' + [name].replace('[Hh]alte ([Nn]autique )?(de |du |d\')?','')";
   text-face-name:@sans;
   text-placement:point;
   text-fill:@marina_text;
