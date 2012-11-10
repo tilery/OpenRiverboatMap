@@ -78,7 +78,10 @@
         "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
         "table": "( SELECT way, way_area AS area, COALESCE(landuse, leisure, \"natural\", highway, amenity, tourism) AS type\n  FROM planet_osm_polygon\n  WHERE way_area > 100000\n  ORDER BY way_area DESC\n) AS data",
         "type": "postgis",
-        "user": "osm"
+        "user": "osm",
+        "extent_cache": "auto",
+        "extent": "309600.94,5775400.76,628518.69,6175177.48",
+        "extent_from_subquery": "true"
       },
       "class": "",
       "geometry": "multipolygon",
@@ -86,7 +89,16 @@
       "name": "landuse_gen0",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "srs-name": "900913",
-      "status": "on"
+      "status": "on",
+      "extent": [
+        2.7811925637977093,
+        45.96911189089108,
+        5.646079455817794,
+        48.40904697912344
+      ],
+      "advanced": {
+        "extent_from_subquery": "true"
+      }
     },
     {
       "Datasource": {
@@ -101,7 +113,10 @@
         "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
         "table": "( SELECT way, way_area AS area, COALESCE(landuse, leisure, \"natural\", highway, amenity, tourism) AS type\n  FROM planet_osm_polygon\n  WHERE way_area > 10000\n  ORDER BY way_area DESC\n) AS data",
         "type": "postgis",
-        "user": "osm"
+        "user": "osm",
+        "extent_cache": "auto",
+        "extent": "309600.94,5775400.76,628518.69,6175177.48",
+        "extent_from_subquery": "true"
       },
       "class": "",
       "geometry": "multipolygon",
@@ -109,7 +124,16 @@
       "name": "landuse_gen1",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "srs-name": "900913",
-      "status": "on"
+      "status": "on",
+      "extent": [
+        2.7811925637977093,
+        45.96911189089108,
+        5.646079455817794,
+        48.40904697912344
+      ],
+      "advanced": {
+        "extent_from_subquery": "true"
+      }
     },
     {
       "Datasource": {
@@ -124,7 +148,10 @@
         "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
         "table": "( SELECT way, way_area AS area, COALESCE(landuse, leisure, \"natural\", highway, amenity, tourism) AS type\n  FROM planet_osm_polygon\n  ORDER BY way_area DESC\n) AS data",
         "type": "postgis",
-        "user": "osm"
+        "user": "osm",
+        "extent_cache": "auto",
+        "extent": "309600.94,5775400.76,628518.69,6175177.48",
+        "extent_from_subquery": "true"
       },
       "class": "",
       "geometry": "polygon",
@@ -132,7 +159,16 @@
       "name": "landuse",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "srs-name": "900913",
-      "status": "on"
+      "status": "on",
+      "extent": [
+        2.7811925637977093,
+        45.96911189089108,
+        5.646079455817794,
+        48.40904697912344
+      ],
+      "advanced": {
+        "extent_from_subquery": "true"
+      }
     },
     {
       "Datasource": {
@@ -146,7 +182,8 @@
         "type": "postgis",
         "user": "osm",
         "extent_cache": "auto",
-        "extent": "254257.4,5760270.21,646049.09,6204106.22"
+        "extent": "254257.4,5760270.21,646049.09,6204106.22",
+        "extent_from_subquery": "true"
       },
       "class": "",
       "geometry": "linestring",
@@ -160,7 +197,9 @@
         5.803557718385082,
         48.5812591416649
       ],
-      "advanced": {}
+      "advanced": {
+        "extent_from_subquery": "true"
+      }
     },
     {
       "Datasource": {
@@ -206,7 +245,8 @@
         "type": "postgis",
         "user": "osm",
         "extent_cache": "auto",
-        "extent": "309600.94,5775400.76,628518.69,6175177.48"
+        "extent": "309600.94,5775400.76,628518.69,6175177.48",
+        "extent_from_subquery": "true"
       },
       "class": "",
       "geometry": "polygon",
@@ -221,7 +261,9 @@
         5.646079455817794,
         48.40904697912344
       ],
-      "advanced": {}
+      "advanced": {
+        "extent_from_subquery": "true"
+      }
     },
     {
       "Datasource": {
@@ -238,7 +280,8 @@
         "type": "postgis",
         "user": "osm",
         "extent_cache": "auto",
-        "extent": "309600.94,5775400.76,628518.69,6175177.48"
+        "extent": "309600.94,5775400.76,628518.69,6175177.48",
+        "extent_from_subquery": "true"
       },
       "class": "",
       "geometry": "polygon",
@@ -253,7 +296,9 @@
         5.646079455817794,
         48.40904697912344
       ],
-      "advanced": {}
+      "advanced": {
+        "extent_from_subquery": "true"
+      }
     },
     {
       "Datasource": {
@@ -270,7 +315,8 @@
         "type": "postgis",
         "user": "osm",
         "extent_cache": "auto",
-        "extent": "153928.51,5775400.76,628518.69,6321895.39"
+        "extent": "153928.51,5775400.76,628518.69,6321895.39",
+        "extent_from_subquery": "true"
       },
       "class": "",
       "geometry": "polygon",
@@ -285,7 +331,9 @@
         5.646079455817794,
         49.2764228507296
       ],
-      "advanced": {}
+      "advanced": {
+        "extent_from_subquery": "true"
+      }
     },
     {
       "Datasource": {
@@ -300,14 +348,26 @@
         "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
         "table": "( SELECT way, way_area AS area, COALESCE(leisure) AS type\n  FROM planet_osm_polygon\n  WHERE leisure = 'nature_reserve'\n  ORDER BY way_area DESC\n) AS data",
         "type": "postgis",
-        "user": "osm"
+        "user": "osm",
+        "extent_cache": "auto",
+        "extent": "324025.4,5837222.39,572685,6072610.45",
+        "extent_from_subquery": "true"
       },
       "class": "",
       "geometry": "polygon",
       "id": "landuse_overlays",
       "name": "landuse_overlays",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
-      "srs-name": "900913"
+      "srs-name": "900913",
+      "extent": [
+        2.9107696926294158,
+        46.35376318399328,
+        5.144516884859881,
+        47.793749592896354
+      ],
+      "advanced": {
+        "extent_from_subquery": "true"
+      }
     },
     {
       "Datasource": {
@@ -321,14 +381,26 @@
         "project": "osm-bright-imposm",
         "table": "( SELECT way, admin_level\n  FROM planet_osm_line\n  WHERE boundary = 'administrative'\n    AND admin_level IN ('2','3','4')\n) AS data",
         "type": "postgis",
-        "user": "osm"
+        "user": "osm",
+        "extent_cache": "auto",
+        "extent": "316646.25,5805516.33,614357.25,6175177.48",
+        "extent_from_subquery": "true"
       },
       "class": "",
       "geometry": "linestring",
       "id": "admin",
       "name": "admin",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
-      "srs-name": "900913"
+      "srs-name": "900913",
+      "extent": [
+        2.84448166034131,
+        46.156825491549434,
+        5.518865075846378,
+        48.40904697912344
+      ],
+      "advanced": {
+        "extent_from_subquery": "true"
+      }
     },
     {
       "Datasource": {
@@ -340,7 +412,10 @@
         "port": "5432",
         "table": "( SELECT way, \"building\" AS type\n  FROM planet_osm_polygon\n  WHERE building NOT IN ('0','false', 'no')\n  ORDER BY ST_YMin(ST_Envelope(way)) DESC\n) AS data",
         "type": "postgis",
-        "user": "osm"
+        "user": "osm",
+        "extent_cache": "auto",
+        "extent": "317933.46,5807760.99,609448.27,6168295.23",
+        "extent_from_subquery": "true"
       },
       "class": "",
       "geometry": "polygon",
@@ -348,7 +423,15 @@
       "name": "buildings",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "srs-name": "900913",
-      "status": "on"
+      "extent": [
+        2.856044864510025,
+        46.170791142364514,
+        5.474766958212008,
+        48.36799094320968
+      ],
+      "advanced": {
+        "extent_from_subquery": "true"
+      }
     },
     {
       "Datasource": {
@@ -363,14 +446,26 @@
         "srs": null,
         "table": "( SELECT way, COALESCE(highway, railway) AS type, 0 AS bridge, access, render, layer, 1 as tunnel,\n  CASE\n    WHEN highway IN ('motorway', 'trunk') THEN 'motorway'\n    WHEN highway IN ('primary', 'secondary') THEN 'mainroad'\n    WHEN highway IN ('motorway_link', 'trunk_link', 'primary_link', 'secondary_link', 'tertiary', 'tertiary_link', 'residential', 'unclassified', 'road', 'living_street') THEN 'minorroad'\n    WHEN highway IN ('service', 'track') THEN 'service'\n    WHEN highway IN ('path', 'cycleway', 'footway', 'pedestrian', 'steps', 'bridleway') THEN 'noauto'\n    WHEN railway IN ('light_rail', 'subway', 'narrow_gauge', 'rail', 'tram') THEN 'railway'\n    ELSE 'other' END AS stylegroup\n  FROM (\n    SELECT *, '1_outline' AS render FROM planet_osm_line\n    WHERE tunnel NOT IN ('', '0', 'no')\n    UNION ALL\n    SELECT *, '2_line' AS render FROM planet_osm_line\n    WHERE tunnel NOT IN ('', '0', 'no')\n    UNION ALL\n    SELECT *, '3_inline' AS render FROM planet_osm_line\n    WHERE tunnel NOT IN ('', '0', 'no')\n  ) AS tunnels\n  ORDER BY layer ASC, render ASC\n) AS data",
         "type": "postgis",
-        "user": "osm"
+        "user": "osm",
+        "extent_cache": "auto",
+        "extent": "325344.18,5809147.65,604929.72,6165389.43",
+        "extent_from_subquery": "true"
       },
       "class": "",
       "geometry": "linestring",
       "id": "tunnel",
       "name": "tunnel",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
-      "srs-name": "900913"
+      "srs-name": "900913",
+      "extent": [
+        2.9226164949333273,
+        46.179416784057885,
+        5.434176132941425,
+        48.35064645926223
+      ],
+      "advanced": {
+        "extent_from_subquery": "true"
+      }
     },
     {
       "Datasource": {
@@ -385,14 +480,26 @@
         "srs": null,
         "table": "( SELECT way \n  FROM planet_osm_point \n  WHERE highway = 'turning_circle'\n) AS data",
         "type": "postgis",
-        "user": "osm"
+        "user": "osm",
+        "extent_cache": "auto",
+        "extent": "339886.123897759,5812478.88135308,603483.030410521,6157526.23847096",
+        "extent_from_subquery": "true"
       },
       "class": "",
       "geometry": "point",
       "id": "turning_circle_case",
       "name": "turning_circle_case",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
-      "srs-name": "900913"
+      "srs-name": "900913",
+      "extent": [
+        3.0532489995749823,
+        46.200132994969316,
+        5.4211802992453695,
+        48.303682094878255
+      ],
+      "advanced": {
+        "extent_from_subquery": "true"
+      }
     },
     {
       "Datasource": {
@@ -407,14 +514,26 @@
         "srs": null,
         "table": "( SELECT way, COALESCE(highway, railway) AS type, 0 AS tunnel, 0 AS bridge, access, 'fill' AS render,\n  CASE\n    WHEN highway IN ('motorway', 'trunk') THEN 'motorway'\n    WHEN highway IN ('primary', 'secondary') THEN 'mainroad'\n    WHEN highway IN ('motorway_link', 'trunk_link', 'primary_link', 'secondary_link', 'tertiary', 'tertiary_link', 'residential', 'unclassified', 'road', 'living_street') THEN 'minorroad'\n    WHEN highway IN ('service', 'track') THEN 'service'\n    WHEN highway IN ('path', 'cycleway', 'footway', 'pedestrian', 'steps', 'bridleway') THEN 'noauto'\n    WHEN railway IN ('light_rail', 'subway', 'narrow_gauge', 'rail', 'tram') THEN 'railway'\n    ELSE 'other' END AS stylegroup\n  FROM planet_osm_line\n  WHERE (highway IS NOT NULL OR railway IS NOT NULL)\n    AND (tunnel IS NULL OR tunnel = 'no')\n    AND (bridge IS NULL OR bridge = 'no')\n  ORDER BY z_order\n) AS data",
         "type": "postgis",
-        "user": "osm"
+        "user": "osm",
+        "extent_cache": "auto",
+        "extent": "304464.19,5798153.47,630437.76,6204106.22",
+        "extent_from_subquery": "true"
       },
       "class": "",
       "geometry": "linestring",
       "id": "roads_high",
       "name": "roads_high",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
-      "srs-name": "900913"
+      "srs-name": "900913",
+      "extent": [
+        2.7350483534406997,
+        46.11099093476963,
+        5.663318754940747,
+        48.5812591416649
+      ],
+      "advanced": {
+        "extent_from_subquery": "true"
+      }
     },
     {
       "Datasource": {
@@ -426,14 +545,26 @@
         "port": "5432",
         "table": "( SELECT way, highway AS type\n  FROM planet_osm_roads\n  WHERE highway IN ('motorway', 'trunk', 'primary', 'secondary', 'motorway_link', 'trunk_link')\n) AS data",
         "type": "postgis",
-        "user": "osm"
+        "user": "osm",
+        "extent_cache": "auto",
+        "extent": "309845.95,5803026.01,628599.89,6184281.06",
+        "extent_from_subquery": "true"
       },
       "class": "",
       "geometry": "linestring",
       "id": "roads_med",
       "name": "roads_med",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
-      "srs-name": "900913"
+      "srs-name": "900913",
+      "extent": [
+        2.78339352607533,
+        46.141327263942436,
+        5.646808887828499,
+        48.46330347237587
+      ],
+      "advanced": {
+        "extent_from_subquery": "true"
+      }
     },
     {
       "Datasource": {
@@ -445,7 +576,10 @@
         "port": "5432",
         "table": "( SELECT way, highway AS type, bridge, tunnel\n    FROM planet_osm_roads\n    WHERE highway IN ('motorway', 'trunk')\n) AS data",
         "type": "postgis",
-        "user": "osm"
+        "user": "osm",
+        "extent_cache": "auto",
+        "extent": "309845.95,5803026.01,613134.56,6169169.77",
+        "extent_from_subquery": "true"
       },
       "class": "",
       "geometry": "linestring",
@@ -453,7 +587,16 @@
       "name": "roads_low",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "srs-name": "900913",
-      "status": "on"
+      "status": "on",
+      "extent": [
+        2.78339352607533,
+        46.141327263942436,
+        5.507881464698977,
+        48.37320984529536
+      ],
+      "advanced": {
+        "extent_from_subquery": "true"
+      }
     },
     {
       "Datasource": {
@@ -465,14 +608,26 @@
         "port": "5432",
         "table": "( SELECT way \n  FROM planet_osm_point\n  WHERE highway = 'turning_circle'\n) AS data",
         "type": "postgis",
-        "user": "osm"
+        "user": "osm",
+        "extent_cache": "auto",
+        "extent": "339886.123897759,5812478.88135308,603483.030410521,6157526.23847096",
+        "extent_from_subquery": "true"
       },
       "class": "",
       "geometry": "point",
       "id": "turning_circle_fill",
       "name": "turning_circle_fill",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
-      "srs-name": "900913"
+      "srs-name": "900913",
+      "extent": [
+        3.0532489995749823,
+        46.200132994969316,
+        5.4211802992453695,
+        48.303682094878255
+      ],
+      "advanced": {
+        "extent_from_subquery": "true"
+      }
     },
     {
       "Datasource": {
@@ -489,7 +644,8 @@
         "type": "postgis",
         "user": "osm",
         "extent_cache": "auto",
-        "extent": "62089.4,5760270.21,646049.09,6349285.31"
+        "extent": "62089.4,5760270.21,646049.09,6349285.31",
+        "extent_from_subquery": "true"
       },
       "class": "",
       "geometry": "linestring",
@@ -504,7 +660,9 @@
         5.803557718385082,
         49.436685857301114
       ],
-      "advanced": {}
+      "advanced": {
+        "extent_from_subquery": "true"
+      }
     },
     {
       "Datasource": {
@@ -519,7 +677,10 @@
         "srs": null,
         "table": "( SELECT way, COALESCE(highway, railway) AS type, 1 AS bridge, access, render, layer, 0 as tunnel,\n  CASE\n    WHEN highway IN ('motorway', 'trunk') THEN 'motorway'\n    WHEN highway IN ('primary', 'secondary') THEN 'mainroad'\n    WHEN highway IN ('motorway_link', 'trunk_link', 'primary_link', 'secondary_link', 'tertiary', 'tertiary_link', 'residential', 'unclassified', 'road', 'living_street') THEN 'minorroad'\n    WHEN highway IN ('service', 'track') THEN 'service'\n    WHEN highway IN ('path', 'cycleway', 'footway', 'pedestrian', 'steps', 'bridleway') THEN 'noauto'\n    WHEN railway IN ('light_rail', 'subway', 'narrow_gauge', 'rail', 'tram') THEN 'railway'\n    ELSE 'other' END AS stylegroup\n  FROM (\n    SELECT *, '1_outline' AS render FROM planet_osm_line\n    WHERE bridge NOT IN ('', '0', 'no')\n    UNION ALL\n    SELECT *, '2_line' AS render FROM planet_osm_line\n    WHERE bridge NOT IN ('', '0', 'no')\n    UNION ALL\n    SELECT *, '3_inline' AS render FROM planet_osm_line\n    WHERE bridge NOT IN ('', '0', 'no')\n  ) AS bridges\n  ORDER BY layer ASC, render ASC\n) AS data",
         "type": "postgis",
-        "user": "osm"
+        "user": "osm",
+        "extent_cache": "auto",
+        "extent": "317873.15,5809438.33,612838.63,6168428.13",
+        "extent_from_subquery": "true"
       },
       "class": "",
       "geometry": "linestring",
@@ -527,7 +688,16 @@
       "name": "bridge",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "srs-name": "900913",
-      "status": "on"
+      "status": "on",
+      "extent": [
+        2.8555030905621726,
+        46.1812247713592,
+        5.505223080278682,
+        48.368784071286626
+      ],
+      "advanced": {
+        "extent_from_subquery": "true"
+      }
     },
     {
       "Datasource": {
@@ -562,7 +732,10 @@
         "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
         "table": "( SELECT way, place AS type, name, z_order, population\n  FROM planet_osm_point\n  WHERE place in ('country', 'state', 'city', 'town', 'village', 'hamlet', 'suburb', 'neighbourhood', 'locality')\n  ORDER BY population DESC NULLS LAST\n) AS data",
         "type": "postgis",
-        "user": "osm"
+        "user": "osm",
+        "extent_cache": "auto",
+        "extent": "317998.585808574,5808051.76350886,611636.036519238,6167875.95592011",
+        "extent_from_subquery": "true"
       },
       "class": "",
       "geometry": "point",
@@ -570,7 +743,16 @@
       "name": "place",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "srs-name": "900913",
-      "status": "on"
+      "status": "on",
+      "extent": [
+        2.8566298996023516,
+        46.172599994970646,
+        5.4944199992351725,
+        48.36548869487583
+      ],
+      "advanced": {
+        "extent_from_subquery": "true"
+      }
     },
     {
       "Datasource": {
@@ -608,7 +790,10 @@
         "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
         "table": "( SELECT way, highway AS type, name, ref, oneway, CHAR_LENGTH(ref) AS reflen\n    FROM planet_osm_line\n    WHERE highway IN ('motorway', 'trunk')\n      AND (name IS NOT NULL OR ref IS NOT NULL)\n) AS data",
         "type": "postgis",
-        "user": "osm"
+        "user": "osm",
+        "extent_cache": "auto",
+        "extent": "309845.95,5803026.01,613134.56,6169169.77",
+        "extent_from_subquery": "true"
       },
       "class": "",
       "geometry": "linestring",
@@ -616,7 +801,16 @@
       "name": "motorway_label",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "srs-name": "900913",
-      "status": "on"
+      "status": "on",
+      "extent": [
+        2.78339352607533,
+        46.141327263942436,
+        5.507881464698977,
+        48.37320984529536
+      ],
+      "advanced": {
+        "extent_from_subquery": "true"
+      }
     },
     {
       "Datasource": {
@@ -631,7 +825,10 @@
         "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
         "table": "( SELECT way, highway AS type, name, oneway\n  FROM planet_osm_line\n  WHERE (name IS NOT NULL OR oneway IN ('yes', 'true', '1', '-1'))\n    AND highway IN ('primary', 'secondary', 'tertiary')\n) AS data",
         "type": "postgis",
-        "user": "osm"
+        "user": "osm",
+        "extent_cache": "auto",
+        "extent": "317292.44,5806314.98,609389.48,6165571.43",
+        "extent_from_subquery": "true"
       },
       "class": "",
       "geometry": "linestring",
@@ -639,7 +836,16 @@
       "name": "mainroad_label",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "srs-name": "900913",
-      "status": "on"
+      "status": "on",
+      "extent": [
+        2.850286483875762,
+        46.16179487623324,
+        5.474238838656475,
+        48.35173297581872
+      ],
+      "advanced": {
+        "extent_from_subquery": "true"
+      }
     },
     {
       "Datasource": {
@@ -654,7 +860,10 @@
         "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
         "table": "( SELECT way, highway AS type, name, oneway\n  FROM planet_osm_line\n  WHERE (name IS NOT NULL OR oneway IN ('yes', 'true', '1', '-1'))\n    AND highway IN ('residential', 'unclassified', 'road', 'living_street', 'unknown')\n) AS data",
         "type": "postgis",
-        "user": "osm"
+        "user": "osm",
+        "extent_cache": "auto",
+        "extent": "320456.46,5807225.58,613196.84,6166146.68",
+        "extent_from_subquery": "true"
       },
       "class": "",
       "geometry": "linestring",
@@ -662,7 +871,16 @@
       "name": "minorroad_label",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "srs-name": "900913",
-      "status": "on"
+      "status": "on",
+      "extent": [
+        2.8787093591283606,
+        46.16746029207878,
+        5.5084409354579265,
+        48.35516699188881
+      ],
+      "advanced": {
+        "extent_from_subquery": "true"
+      }
     },
     {
       "Datasource": {
@@ -677,7 +895,10 @@
         "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
         "table": "( SELECT way, man_made\n  FROM planet_osm_line\n  WHERE man_made='pier') AS data",
         "type": "postgis",
-        "user": "osm"
+        "user": "osm",
+        "extent_cache": "auto",
+        "extent": "339546.69,5832441.76,586443.06,6165933.04",
+        "extent_from_subquery": "true"
       },
       "class": "",
       "geometry": "linestring",
@@ -685,7 +906,16 @@
       "name": "moorings",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "srs-name": "900913",
-      "status": "on"
+      "status": "on",
+      "extent": [
+        3.0501998129919303,
+        46.32411425740588,
+        5.268107640638216,
+        48.353891672197435
+      ],
+      "advanced": {
+        "extent_from_subquery": "true"
+      }
     },
     {
       "Datasource": {
@@ -700,7 +930,10 @@
         "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
         "table": "( SELECT way, tags->'lock_name' as lock_name, lock\n  FROM planet_osm_line\n  WHERE lock='yes') AS data",
         "type": "postgis",
-        "user": "osm"
+        "user": "osm",
+        "extent_cache": "auto",
+        "extent": "318627.32,5823405.27,604786.18,6106450.41",
+        "extent_from_subquery": "true"
       },
       "class": "",
       "geometry": "linestring",
@@ -708,7 +941,16 @@
       "name": "locks",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "srs-name": "900913",
-      "status": "on"
+      "status": "on",
+      "extent": [
+        2.8622779149404165,
+        46.268027051259736,
+        5.432886691182601,
+        47.99756898416899
+      ],
+      "advanced": {
+        "extent_from_subquery": "true"
+      }
     },
     {
       "Datasource": {
@@ -723,7 +965,10 @@
         "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
         "table": "( SELECT way, waterway AS type, name, tags->'motorboat' as motorboat\n  FROM planet_osm_line\n  WHERE waterway IN ('canal', 'river', 'stream') \n    AND name IS NOT NULL\n) AS data",
         "type": "postgis",
-        "user": "osm"
+        "user": "osm",
+        "extent_cache": "auto",
+        "extent": "254257.4,5803935.92,628554.89,6170411.78",
+        "extent_from_subquery": "true"
       },
       "class": "",
       "geometry": "linestring",
@@ -731,7 +976,16 @@
       "name": "waterway_label",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "srs-name": "900913",
-      "status": "on"
+      "status": "on",
+      "extent": [
+        2.284033085204908,
+        46.146990492852865,
+        5.646404645950645,
+        48.38062074096956
+      ],
+      "advanced": {
+        "extent_from_subquery": "true"
+      }
     },
     {
       "Datasource": {
@@ -748,7 +1002,8 @@
         "type": "postgis",
         "user": "osm",
         "extent_cache": "auto",
-        "extent": "284232.434289169,5760270.21979403,646049.0989954,6192442.57547119"
+        "extent": "284232.434289169,5760270.21979403,646049.0989954,6192442.57547119",
+        "extent_from_subquery": "true"
       },
       "class": "",
       "geometry": "point",
@@ -763,7 +1018,9 @@
         5.803557799192135,
         48.511896094870266
       ],
-      "advanced": {}
+      "advanced": {
+        "extent_from_subquery": "true"
+      }
     }
   ],
   "scale": 1,
