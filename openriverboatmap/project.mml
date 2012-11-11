@@ -79,8 +79,8 @@
         "table": "( SELECT way, way_area AS area, COALESCE(landuse, leisure, \"natural\", highway, amenity, tourism) AS type\n  FROM planet_osm_polygon\n  WHERE way_area > 100000\n  ORDER BY way_area DESC\n) AS data",
         "type": "postgis",
         "user": "osm",
-        "extent_cache": "dynamic",
-        "extent": "",
+        "extent_cache": "auto",
+        "extent": "309600.94,5775400.76,628518.69,6175177.48",
         "extent_from_subquery": "true"
       },
       "class": "",
@@ -114,8 +114,8 @@
         "table": "( SELECT way, way_area AS area, COALESCE(landuse, leisure, \"natural\", highway, amenity, tourism) AS type\n  FROM planet_osm_polygon\n  WHERE way_area > 10000\n  ORDER BY way_area DESC\n) AS data",
         "type": "postgis",
         "user": "osm",
-        "extent_cache": "dynamic",
-        "extent": "",
+        "extent_cache": "auto",
+        "extent": "309600.94,5775400.76,628518.69,6175177.48",
         "extent_from_subquery": "true"
       },
       "class": "",
@@ -149,8 +149,8 @@
         "table": "( SELECT way, way_area AS area, COALESCE(landuse, leisure, \"natural\", highway, amenity, tourism) AS type\n  FROM planet_osm_polygon\n  ORDER BY way_area DESC\n) AS data",
         "type": "postgis",
         "user": "osm",
-        "extent_cache": "dynamic",
-        "extent": "",
+        "extent_cache": "auto",
+        "extent": "309600.94,5775400.76,628518.69,6175177.48",
         "extent_from_subquery": "true"
       },
       "class": "",
@@ -181,8 +181,8 @@
         "table": "( SELECT way, waterway AS type, tags->'motorboat' as motorboat\n  FROM planet_osm_line\n  WHERE waterway IN ('river', 'canal', 'stream')\n) AS data",
         "type": "postgis",
         "user": "osm",
-        "extent_cache": "dynamic",
-        "extent": "",
+        "extent_cache": "auto",
+        "extent": "254257.4,5760270.21,646049.09,6204106.22",
         "extent_from_subquery": "true"
       },
       "class": "",
@@ -212,8 +212,8 @@
         "table": "( SELECT way, waterway AS type, tags->'motorboat' as motorboat\n  FROM planet_osm_line\n  WHERE waterway IN ('river', 'canal', 'stream', 'ditch', 'drain')\n) AS data",
         "type": "postgis",
         "user": "osm",
-        "extent_cache": "dynamic",
-        "extent": ""
+        "extent_cache": "auto",
+        "extent": "254257.4,5760270.21,646049.09,6204106.22"
       },
       "class": "",
       "geometry": "linestring",
@@ -244,8 +244,8 @@
         "table": "( SELECT way, \"natural\" AS type, way_area AS area, tags->'motorboat' as motorboat\n  FROM planet_osm_polygon\n  WHERE (\"natural\" IN ('water', 'pond')\n    OR waterway IN ('basin', 'canal', 'mill_pond', 'pond', 'riverbank', 'stream'))\n    AND way_area > 10000\n) AS data",
         "type": "postgis",
         "user": "osm",
-        "extent_cache": "dynamic",
-        "extent": "",
+        "extent_cache": "auto",
+        "extent": "309600.94,5775400.76,628518.69,6175177.48",
         "extent_from_subquery": "true"
       },
       "class": "",
@@ -279,8 +279,8 @@
         "table": "( SELECT way, \"natural\" AS type, way_area AS area, tags->'motorboat' as motorboat\n  FROM planet_osm_polygon\n  WHERE (\"natural\" IN ('water', 'pond')\n    OR waterway IN ('basin', 'canal', 'mill_pond', 'pond', 'riverbank', 'stream'))\n    AND way_area > 1000\n) AS data",
         "type": "postgis",
         "user": "osm",
-        "extent_cache": "dynamic",
-        "extent": "",
+        "extent_cache": "auto",
+        "extent": "309600.94,5775400.76,628518.69,6175177.48",
         "extent_from_subquery": "true"
       },
       "class": "",
@@ -314,8 +314,8 @@
         "table": "( SELECT way, way_area AS area, tags->'motorboat' as motorboat, waterway AS type\n  FROM planet_osm_polygon\n  WHERE \"natural\" IN ('water', 'pond')\n    OR waterway IN ('basin', 'canal', 'mill_pond', 'pond', 'riverbank', 'stream', 'lock')\n) AS data",
         "type": "postgis",
         "user": "osm",
-        "extent_cache": "dynamic",
-        "extent": "",
+        "extent_cache": "auto",
+        "extent": "153928.51,5775400.76,628518.69,6321895.39",
         "extent_from_subquery": "true"
       },
       "class": "",
@@ -349,8 +349,8 @@
         "table": "( SELECT way, way_area AS area, COALESCE(leisure) AS type\n  FROM planet_osm_polygon\n  WHERE leisure = 'nature_reserve'\n  ORDER BY way_area DESC\n) AS data",
         "type": "postgis",
         "user": "osm",
-        "extent_cache": "dynamic",
-        "extent": "",
+        "extent_cache": "auto",
+        "extent": "324025.4,5837222.39,572685,6072610.45",
         "extent_from_subquery": "true"
       },
       "class": "",
@@ -382,8 +382,8 @@
         "table": "( SELECT way, admin_level\n  FROM planet_osm_line\n  WHERE boundary = 'administrative'\n    AND admin_level IN ('2','3','4')\n) AS data",
         "type": "postgis",
         "user": "osm",
-        "extent_cache": "dynamic",
-        "extent": "",
+        "extent_cache": "auto",
+        "extent": "316646.25,5805516.33,614357.25,6175177.48",
         "extent_from_subquery": "true"
       },
       "class": "",
@@ -413,8 +413,8 @@
         "table": "( SELECT way, \"building\" AS type\n  FROM planet_osm_polygon\n  WHERE building NOT IN ('0','false', 'no')\n  ORDER BY ST_YMin(ST_Envelope(way)) DESC\n) AS data",
         "type": "postgis",
         "user": "osm",
-        "extent_cache": "dynamic",
-        "extent": "",
+        "extent_cache": "auto",
+        "extent": "317933.46,5807760.99,609448.27,6168295.23",
         "extent_from_subquery": "true"
       },
       "class": "",
@@ -447,8 +447,8 @@
         "table": "( SELECT way, COALESCE(highway, railway) AS type, 0 AS bridge, access, render, layer, 1 as tunnel,\n  CASE\n    WHEN highway IN ('motorway', 'trunk') THEN 'motorway'\n    WHEN highway IN ('primary', 'secondary') THEN 'mainroad'\n    WHEN highway IN ('motorway_link', 'trunk_link', 'primary_link', 'secondary_link', 'tertiary', 'tertiary_link', 'residential', 'unclassified', 'road', 'living_street') THEN 'minorroad'\n    WHEN highway IN ('service', 'track') THEN 'service'\n    WHEN highway IN ('path', 'cycleway', 'footway', 'pedestrian', 'steps', 'bridleway') THEN 'noauto'\n    WHEN railway IN ('light_rail', 'subway', 'narrow_gauge', 'rail', 'tram') THEN 'railway'\n    ELSE 'other' END AS stylegroup\n  FROM (\n    SELECT *, '1_outline' AS render FROM planet_osm_line\n    WHERE tunnel NOT IN ('', '0', 'no')\n    UNION ALL\n    SELECT *, '2_line' AS render FROM planet_osm_line\n    WHERE tunnel NOT IN ('', '0', 'no')\n    UNION ALL\n    SELECT *, '3_inline' AS render FROM planet_osm_line\n    WHERE tunnel NOT IN ('', '0', 'no')\n  ) AS tunnels\n  ORDER BY layer ASC, render ASC\n) AS data",
         "type": "postgis",
         "user": "osm",
-        "extent_cache": "dynamic",
-        "extent": "",
+        "extent_cache": "auto",
+        "extent": "325344.18,5809147.65,604929.72,6165389.43",
         "extent_from_subquery": "true"
       },
       "class": "",
@@ -481,8 +481,8 @@
         "table": "( SELECT way \n  FROM planet_osm_point \n  WHERE highway = 'turning_circle'\n) AS data",
         "type": "postgis",
         "user": "osm",
-        "extent_cache": "dynamic",
-        "extent": "",
+        "extent_cache": "auto",
+        "extent": "339886.123897759,5812478.88135308,603483.030410521,6157526.23847096",
         "extent_from_subquery": "true"
       },
       "class": "",
@@ -515,8 +515,8 @@
         "table": "( SELECT way, COALESCE(highway, railway) AS type, 0 AS tunnel, 0 AS bridge, access, 'fill' AS render,\n  CASE\n    WHEN highway IN ('motorway', 'trunk') THEN 'motorway'\n    WHEN highway IN ('primary', 'secondary') THEN 'mainroad'\n    WHEN highway IN ('motorway_link', 'trunk_link', 'primary_link', 'secondary_link', 'tertiary', 'tertiary_link', 'residential', 'unclassified', 'road', 'living_street') THEN 'minorroad'\n    WHEN highway IN ('service', 'track') THEN 'service'\n    WHEN highway IN ('path', 'cycleway', 'footway', 'pedestrian', 'steps', 'bridleway') THEN 'noauto'\n    WHEN railway IN ('light_rail', 'subway', 'narrow_gauge', 'rail', 'tram') THEN 'railway'\n    ELSE 'other' END AS stylegroup\n  FROM planet_osm_line\n  WHERE (highway IS NOT NULL OR railway IS NOT NULL)\n    AND (tunnel IS NULL OR tunnel = 'no')\n    AND (bridge IS NULL OR bridge = 'no')\n  ORDER BY z_order\n) AS data",
         "type": "postgis",
         "user": "osm",
-        "extent_cache": "dynamic",
-        "extent": "",
+        "extent_cache": "auto",
+        "extent": "304464.19,5798153.47,630437.76,6204106.22",
         "extent_from_subquery": "true"
       },
       "class": "",
@@ -546,8 +546,8 @@
         "table": "( SELECT way, highway AS type\n  FROM planet_osm_roads\n  WHERE highway IN ('motorway', 'trunk', 'primary', 'secondary', 'motorway_link', 'trunk_link')\n) AS data",
         "type": "postgis",
         "user": "osm",
-        "extent_cache": "dynamic",
-        "extent": "",
+        "extent_cache": "auto",
+        "extent": "309845.95,5803026.01,628599.89,6184281.06",
         "extent_from_subquery": "true"
       },
       "class": "",
@@ -577,8 +577,8 @@
         "table": "( SELECT way, highway AS type, bridge, tunnel\n    FROM planet_osm_roads\n    WHERE highway IN ('motorway', 'trunk')\n) AS data",
         "type": "postgis",
         "user": "osm",
-        "extent_cache": "dynamic",
-        "extent": "",
+        "extent_cache": "auto",
+        "extent": "309845.95,5803026.01,613134.56,6169169.77",
         "extent_from_subquery": "true"
       },
       "class": "",
@@ -609,8 +609,8 @@
         "table": "( SELECT way \n  FROM planet_osm_point\n  WHERE highway = 'turning_circle'\n) AS data",
         "type": "postgis",
         "user": "osm",
-        "extent_cache": "dynamic",
-        "extent": "",
+        "extent_cache": "auto",
+        "extent": "339886.123897759,5812478.88135308,603483.030410521,6157526.23847096",
         "extent_from_subquery": "true"
       },
       "class": "",
@@ -643,8 +643,8 @@
         "table": "( SELECT way, waterway AS type, tags->'motorboat' as motorboat\n  FROM planet_osm_line\n  WHERE waterway IN ('river', 'canal') and tags->'motorboat'='yes'\n) AS data",
         "type": "postgis",
         "user": "osm",
-        "extent_cache": "dynamic",
-        "extent": "",
+        "extent_cache": "auto",
+        "extent": "62089.4,5760270.21,646049.09,6349285.31",
         "extent_from_subquery": "true"
       },
       "class": "",
@@ -678,8 +678,8 @@
         "table": "( SELECT way, COALESCE(highway, railway) AS type, 1 AS bridge, access, render, layer, 0 as tunnel,\n  CASE\n    WHEN highway IN ('motorway', 'trunk') THEN 'motorway'\n    WHEN highway IN ('primary', 'secondary') THEN 'mainroad'\n    WHEN highway IN ('motorway_link', 'trunk_link', 'primary_link', 'secondary_link', 'tertiary', 'tertiary_link', 'residential', 'unclassified', 'road', 'living_street') THEN 'minorroad'\n    WHEN highway IN ('service', 'track') THEN 'service'\n    WHEN highway IN ('path', 'cycleway', 'footway', 'pedestrian', 'steps', 'bridleway') THEN 'noauto'\n    WHEN railway IN ('light_rail', 'subway', 'narrow_gauge', 'rail', 'tram') THEN 'railway'\n    ELSE 'other' END AS stylegroup\n  FROM (\n    SELECT *, '1_outline' AS render FROM planet_osm_line\n    WHERE bridge NOT IN ('', '0', 'no')\n    UNION ALL\n    SELECT *, '2_line' AS render FROM planet_osm_line\n    WHERE bridge NOT IN ('', '0', 'no')\n    UNION ALL\n    SELECT *, '3_inline' AS render FROM planet_osm_line\n    WHERE bridge NOT IN ('', '0', 'no')\n  ) AS bridges\n  ORDER BY layer ASC, render ASC\n) AS data",
         "type": "postgis",
         "user": "osm",
-        "extent_cache": "dynamic",
-        "extent": "",
+        "extent_cache": "auto",
+        "extent": "317873.15,5809438.33,612838.63,6168428.13",
         "extent_from_subquery": "true"
       },
       "class": "",
@@ -733,8 +733,8 @@
         "table": "( SELECT way, place AS type, name, z_order, population\n  FROM planet_osm_point\n  WHERE place in ('country', 'state', 'city', 'town', 'village', 'hamlet', 'suburb', 'neighbourhood', 'locality')\n  ORDER BY population DESC NULLS LAST\n) AS data",
         "type": "postgis",
         "user": "osm",
-        "extent_cache": "dynamic",
-        "extent": "",
+        "extent_cache": "auto",
+        "extent": "317998.585808574,5808051.76350886,611636.036519238,6167875.95592011",
         "extent_from_subquery": "true"
       },
       "class": "",
@@ -791,8 +791,8 @@
         "table": "( SELECT way, highway AS type, name, ref, oneway, CHAR_LENGTH(ref) AS reflen\n    FROM planet_osm_line\n    WHERE highway IN ('motorway', 'trunk')\n      AND (name IS NOT NULL OR ref IS NOT NULL)\n) AS data",
         "type": "postgis",
         "user": "osm",
-        "extent_cache": "dynamic",
-        "extent": "",
+        "extent_cache": "auto",
+        "extent": "309845.95,5803026.01,613134.56,6169169.77",
         "extent_from_subquery": "true"
       },
       "class": "",
@@ -826,8 +826,8 @@
         "table": "( SELECT way, highway AS type, name, oneway\n  FROM planet_osm_line\n  WHERE (name IS NOT NULL OR oneway IN ('yes', 'true', '1', '-1'))\n    AND highway IN ('primary', 'secondary', 'tertiary')\n) AS data",
         "type": "postgis",
         "user": "osm",
-        "extent_cache": "dynamic",
-        "extent": "",
+        "extent_cache": "auto",
+        "extent": "317292.44,5806314.98,609389.48,6165571.43",
         "extent_from_subquery": "true"
       },
       "class": "",
@@ -861,8 +861,8 @@
         "table": "( SELECT way, highway AS type, name, oneway\n  FROM planet_osm_line\n  WHERE (name IS NOT NULL OR oneway IN ('yes', 'true', '1', '-1'))\n    AND highway IN ('residential', 'unclassified', 'road', 'living_street', 'unknown')\n) AS data",
         "type": "postgis",
         "user": "osm",
-        "extent_cache": "dynamic",
-        "extent": "",
+        "extent_cache": "auto",
+        "extent": "320456.46,5807225.58,613196.84,6166146.68",
         "extent_from_subquery": "true"
       },
       "class": "",
@@ -896,8 +896,8 @@
         "table": "( SELECT way, man_made\n  FROM planet_osm_line\n  WHERE man_made='pier') AS data",
         "type": "postgis",
         "user": "osm",
-        "extent_cache": "dynamic",
-        "extent": "",
+        "extent_cache": "auto",
+        "extent": "339546.69,5832441.76,586443.06,6165933.04",
         "extent_from_subquery": "true"
       },
       "class": "",
@@ -931,8 +931,8 @@
         "table": "( SELECT way, tags->'lock_name' as lock_name, lock\n  FROM planet_osm_line\n  WHERE lock='yes') AS data",
         "type": "postgis",
         "user": "osm",
-        "extent_cache": "dynamic",
-        "extent": "",
+        "extent_cache": "auto",
+        "extent": "318627.32,5823405.27,604786.18,6106450.41",
         "extent_from_subquery": "true"
       },
       "class": "",
@@ -943,10 +943,10 @@
       "srs-name": "900913",
       "status": "on",
       "extent": [
-        2.8622779149404165,
-        46.268027051259736,
-        5.432886691182601,
-        47.99756898416899
+        -178.15520178944752,
+        -85.051,
+        179.2036238941463,
+        83.32739899296284
       ],
       "advanced": {
         "extent_from_subquery": "true"
@@ -966,8 +966,8 @@
         "table": "( SELECT way, waterway AS type, name, tags->'motorboat' as motorboat\n  FROM planet_osm_line\n  WHERE waterway IN ('canal', 'river', 'stream') \n    AND name IS NOT NULL\n) AS data",
         "type": "postgis",
         "user": "osm",
-        "extent_cache": "dynamic",
-        "extent": "",
+        "extent_cache": "auto",
+        "extent": "254257.4,5803935.92,628554.89,6170411.78",
         "extent_from_subquery": "true"
       },
       "class": "",
@@ -978,10 +978,10 @@
       "srs-name": "900913",
       "status": "on",
       "extent": [
-        2.284033085204908,
-        46.146990492852865,
-        5.646404645950645,
-        48.38062074096956
+        -178.15520178944752,
+        -85.051,
+        179.2036238941463,
+        83.32739899296284
       ],
       "advanced": {
         "extent_from_subquery": "true"
@@ -1001,8 +1001,8 @@
         "table": "( SELECT way, COALESCE(tags->'harbour:namenational', name, tags->'int_name') as name, CAST(harbour as BOOLEAN) FROM planet_osm_point\n  WHERE leisure='marina' AND (harbour in ('yes', 'no', '') OR harbour IS NULL)) AS data",
         "type": "postgis",
         "user": "osm",
-        "extent_cache": "dynamic",
-        "extent": "",
+        "extent_cache": "auto",
+        "extent": "284232.434289169,5760270.21979403,646049.0989954,6192442.57547119",
         "extent_from_subquery": "true"
       },
       "class": "",
@@ -1013,10 +1013,10 @@
       "srs-name": "900913",
       "status": "on",
       "extent": [
-        2.881039999598957,
-        46.199371894969346,
-        5.315842499260028,
-        48.28980949487874
+        -178.15520178944752,
+        -85.051,
+        179.2036238941463,
+        83.32739899296284
       ],
       "advanced": {
         "extent_from_subquery": "true"
