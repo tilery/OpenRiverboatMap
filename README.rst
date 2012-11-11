@@ -21,7 +21,7 @@ Getting involved
 
 * symlink the `openriverboatmap` directory into your TileMill projects directory (by default in `~/Documents/MapBow/project/`).
 
-* import some OSM data using the `mapping.py` file with `imposm <http://imposm.org>`_ (or ping me to get a psql dump)
+* import some OSM data with `osm2pgsql <http://wiki.openstreetmap.org/wiki/Osm2pgsql>`_ , using default style but **with option --hstore-all** (or ping me to get a psql dump)
 
 * start hacking the style, commit in a branch, and make a pull request! :)
 
