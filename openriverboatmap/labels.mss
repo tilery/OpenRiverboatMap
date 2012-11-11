@@ -442,7 +442,7 @@
 
 
 /* ================================================================== */
-/* HARBOURS / MARINAS
+/* WATERWAY POIS
 /* ================================================================== */
 
 #marinas[harbour=true][zoom>=7][zoom<=14] {
@@ -479,4 +479,18 @@
   text-wrap-width: 50;
   text-label-position-tolerance: 10;
 }
+
+#milestones::label[zoom>=16] {
+  text-name: "'pk ' + [milestone]";
+  text-face-name:@sans;
+  text-placement:point;
+  text-fill:@marina_text;
+  text-size:10;
+  text-halo-fill:@marina_halo;
+  text-halo-radius:2;
+  text-wrap-width: 50;
+  text-label-position-tolerance: 10;
+}
+
+
 /* ****************************************************************** */
