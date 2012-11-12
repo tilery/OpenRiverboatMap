@@ -33,3 +33,4 @@ Screenshots
 .. image:: http://i.imgur.com/HfEtJh.jpg
 .. image:: http://i.imgur.com/NoJmAh.png
 .. image:: http://i.imgur.com/5agyi.png
+.. image:: http://www.s258792424.onlinehome.fr/aquanomade/phpBB3/download/file.php?id=1035
