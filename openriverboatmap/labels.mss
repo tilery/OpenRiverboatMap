@@ -446,7 +446,7 @@
 /* ================================================================== */
 
 #marinas[harbour=true][zoom>=7][zoom<=14] {
-  text-name:"'⚓ ' + [name].replace('[Pp]ort (de [Pp]laisance )?(de |du |d\')?','')";
+  text-name:"'⚓ ' + [name].replace('[Pp]ort (de [Pp]laisance )?(de |du |d\')','')";
   text-face-name:@sans;
   text-placement:point;
   text-fill:@harbour_text;
@@ -457,7 +457,7 @@
 }
 
 #marinas[harbour=null][zoom>=10][zoom<=14] {
-  text-name:"'⚑ ' + [name].replace('[Hh]alte ([Nn]autique )?(de |du |d\')?','')";
+  text-name:"'⚑ ' + [name].replace('[Hh]alte ([Nn]autique )?(de |du |d\')','')";
   text-face-name:@sans;
   text-placement:point;
   text-fill:@marina_text;
