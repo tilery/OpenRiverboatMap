@@ -445,8 +445,9 @@
 /* WATERWAY POIS
 /* ================================================================== */
 
-#marinas[harbour=true][zoom>=7][zoom<=14] {
-  text-name:"'⚓ ' + [name].replace('[Hh]alte ([Nn]autique )?(de |du |d\')','').replace('[Pp]ort (de [Pp]laisance )?(de |du |d\')','')";
+#marinas[harbour=true][zoom>=7][zoom<=14],
+#marinas[harbour=null][zoom>=10][zoom<=14] {
+  text-name:"''";
   text-face-name:@sans;
   text-placement:point;
   text-fill:@harbour_text;
@@ -455,17 +456,13 @@
   text-size:12;
   text-label-position-tolerance: 10;
 }
-
+#marinas[harbour=true][zoom>=7][zoom<=14] {
+  text-name:"'⚓ ' + [name].replace('[Hh]alte ([Nn]autique )?(de |du |d\')','').replace('[Pp]ort (de [Pp]laisance )?(de |du |d\')','')";
+}
 #marinas[harbour=null][zoom>=10][zoom<=14] {
   text-name:"'⚑ ' + [name].replace('[Hh]alte ([Nn]autique )?(de |du |d\')','').replace('[Pp]ort (de [Pp]laisance )?(de |du |d\')','')";
-  text-face-name:@sans;
-  text-placement:point;
   text-fill:@marina_text;
-  text-size:11;
   text-halo-fill:@marina_halo;
-  text-halo-radius:2;
-  text-wrap-width: 50;
-  text-label-position-tolerance: 10;
 }
 
 #locks::label[zoom>=16] {
