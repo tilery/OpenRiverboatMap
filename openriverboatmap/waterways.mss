@@ -68,6 +68,7 @@ Map { background-color: @water; }
 
 #moorings[zoom>=14] {
 	line-color: @mooring;
+	line-color: @mooring;
   [zoom=14] {
     line-width: 2;
   }
