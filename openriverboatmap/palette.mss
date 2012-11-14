@@ -45,7 +45,7 @@ Map { font-directory: url(./fonts); }
 @park:              #DAF2C1;
 @cemetery:          #D6DED2;
 @wooded:            #d4e4c4;
-@mooring:           #e4e0e0;
+@mooring:           #252305; //#13272e;
 @stone:             #ceba82;
 @agriculture:       #F2E8B6;
 

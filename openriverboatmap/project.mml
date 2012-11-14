@@ -887,7 +887,7 @@
         "dbname": "osm",
         "geometry_field": "way",
         "host": "localhost",
-        "id": "piers",
+        "id": "moorings",
         "key_field": "",
         "password": "osm",
         "port": "5432",

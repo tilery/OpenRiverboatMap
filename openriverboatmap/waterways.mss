@@ -67,23 +67,11 @@ Map { background-color: @water; }
 /* ================================================================== */
 
 #piers[zoom>=14] {
-	line-color: @mooring;
-	line-color: @mooring;
-  [zoom=14] {
-    line-width: 2;
-  }
-  [zoom=15] {
-    line-width: 3;
-  }
-  [zoom=16] {
-    line-width: 4;
-  }
-  [zoom=17] {
-    line-width: 5;
-  }
-  [zoom=18] {
-    line-width: 6;
-  }
+	line-color: @land;
+	[mooring='yes'] {
+		line-color: @mooring;
+	}
+	line-width: 3;
 }
 
 /* ================================================================== */
