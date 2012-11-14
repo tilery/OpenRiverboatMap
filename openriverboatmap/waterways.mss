@@ -66,7 +66,7 @@ Map { background-color: @water; }
 /* MOORING
 /* ================================================================== */
 
-#moorings[zoom>=14] {
+#piers[zoom>=14] {
 	line-color: @mooring;
 	line-color: @mooring;
   [zoom=14] {
