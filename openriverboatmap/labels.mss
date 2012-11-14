@@ -445,8 +445,8 @@
 /* WATERWAY POIS
 /* ================================================================== */
 
-#marinas[harbour=true][zoom>=7][zoom<=14],
-#marinas[harbour=null][zoom>=10][zoom<=14] {
+#marinas[harbour=true][zoom>=7][zoom<18],
+#marinas[harbour=null][zoom>=10][zoom<18] {
   text-name:"''";
   text-face-name:@sans;
   text-placement:point;
@@ -464,7 +464,15 @@
   text-fill:@marina_text;
   text-halo-fill:@marina_halo;
 }
-
+// Do not display harbours icons at level 18
+// because we already display waterway signs,
+// and we want to give preference to them
+#marinas[harbour=true][zoom>14][zoom<18] {
+  text-name:"'⚓'";
+}
+#marinas[harbour=null][zoom>14][zoom<18] {
+  text-name:"'⚑'";
+}
 #locks::label[zoom>=16] {
   text-name: "'⇅ ' + [lock_name]";
   text-face-name:@sans;
