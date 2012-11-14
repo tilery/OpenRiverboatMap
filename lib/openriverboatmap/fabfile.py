@@ -1,7 +1,7 @@
 from fabric.api import (task, env, run, local, roles, cd, execute, hide,
                         puts, sudo, prefix)
 import os
-
+from urlparse import urlparse
 
 env.project_name = 'openriverboatmap'
 env.repository = 'git://github.com/yohanboniface/OpenRiverboatMap.git'
@@ -155,3 +155,16 @@ def generate_style():
     # otherwise it output logs and we get an invalid XML
     with prefix('export NODE_ENV="quiet"'):
         run('carto {project_dir}/openriverboatmap/project.mml > {project_dir}/openriverboatmap/mapnik.xml'.format(**env))
+
+
+@task
+@roles('web', 'db')
+def purge(url):
+    """
+    Purge an URL in Varnish.
+    """
+    # We need to send URL in localhost, because only local IP
+    # is allowed to use PURGE
+    parsed = urlparse(url)
+    local_url = "%s://127.0.0.1%s" % (parsed.scheme, parsed.path)
+    run("curl -X PURGE {local_url}".format(local_url=local_url))
