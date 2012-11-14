@@ -342,44 +342,6 @@
   text-fill: @poi_text;
 }
 
-
-/* ================================================================== */
-/* WATERWAY LABELS
-/* ================================================================== */
-
-#waterway_label[type='river'][zoom>=13],
-#waterway_label[type='canal'][zoom>=15],
-#waterway_label[type='stream'][zoom>=17] {
-  text-fill: @water * 0.75;
-  text-halo-fill: fadeout(lighten(@water,5%),25%);
-  [motorboat='yes'] {
-    text-fill: #fff * 0.75;
-    text-halo-fill: fadeout(lighten(@navigable,5%),25%);
-  }
-  text-name: '[name]';
-  text-face-name: @sans_italic;
-  text-halo-radius: 1;
-  text-placement: line;
-  text-min-distance: 400;
-  text-size: 10;
-  [type='river'][zoom=14],
-  [type='canal'][zoom=16],
-  [type='stream'][zoom=18] {
-    text-name: "[name].replace('([\S\ ])','$1 ')";
-  }
-  [type='river'][zoom=15],
-  [type='canal'][zoom=17] {
-    text-size: 11;
-    text-name: "[name].replace('([\S\ ])','$1 ')";
-  }
-  [type='river'][zoom>=16],
-  [type='canal'][zoom=18] {
-    text-size: 14;
-    text-name: "[name].replace('([\S\ ])','$1 ')";
-    text-spacing: 300;
-  }
-}
-
 /* ================================================================== */
 /* ROAD LABELS
 /* ================================================================== */
@@ -440,6 +402,66 @@
   [zoom=17] { marker-transform: "scale(0.75)"; }
 }
 
+
+/* ================================================================== */
+/* WATERWAY LABELS
+/* ================================================================== */
+
+#waterway_label[type='river'][zoom>=13][zoom<18],
+#waterway_label[type='canal'][zoom>=15][zoom<18],
+#waterway_label[type='stream'][zoom>=17] {
+  text-fill: @water * 0.75;
+  text-halo-fill: fadeout(lighten(@water,5%),25%);
+  [motorboat='yes'] {
+    text-fill: #fff * 0.75;
+    text-halo-fill: fadeout(lighten(@navigable,5%),25%);
+  }
+  text-name: '[name]';
+  text-face-name: @sans_italic;
+  text-halo-radius: 1;
+  text-placement: line;
+  text-min-distance: 400;
+  text-size: 10;
+  [type='river'][zoom=14],
+  [type='canal'][zoom=16],
+  [type='stream'][zoom=18] {
+    text-name: "[name].replace('([\S\ ])','$1 ')";
+  }
+  [type='river'][zoom=15],
+  [type='canal'][zoom=17] {
+    text-size: 11;
+    text-name: "[name].replace('([\S\ ])','$1 ')";
+  }
+  [type='river'][zoom>=16] {
+    text-size: 14;
+    text-name: "[name].replace('([\S\ ])','$1 ')";
+    text-spacing: 300;
+  }
+}
+
+#waterway_label::oneway[oneway=-1][zoom>=17],
+#waterway_label::oneway[oneway='alternat'][zoom>=17],
+#waterway_label::oneway[oneway='yes'][zoom>=17] {
+  text-name:"''";
+  text-face-name: @sans;
+  text-min-distance: 0;
+  text-spacing: 100;
+  [zoom=18] {
+    text-spacing: 200;
+  }
+  text-placement: line;
+  text-fill: #fff * 0.75;
+  text-size: 16;
+  [oneway='yes'] {
+    text-name:"'→'";
+  }
+  [oneway=-1] {
+    text-name:"'←'";
+  }
+  [oneway='alternat'] {
+    text-name:"'↮'";
+  }
+}
 
 /* ================================================================== */
 /* WATERWAY POIS
