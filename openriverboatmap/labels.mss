@@ -507,8 +507,8 @@
   text-label-position-tolerance: 10;
 }
 
-#milestones::label[zoom>=16] {
-  text-name: "'pk ' + [milestone]";
+#waterway_signs[sign='kilometer'][zoom>=16] {
+  text-name: "[name]";
   text-face-name:@sans;
   text-placement:point;
   text-fill:@marina_text;

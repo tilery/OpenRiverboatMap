@@ -998,7 +998,7 @@
         "port": "5432",
         "project": "openriverboatmap",
         "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
-        "table": "( SELECT way, tags->'waterway:sign' as sign FROM planet_osm_point\n  WHERE tags ? 'waterway:sign') AS data",
+        "table": "( SELECT way, tags->'waterway:sign' as sign,name FROM planet_osm_point\n  WHERE tags ? 'waterway:sign') AS data",
         "type": "postgis",
         "user": "osm",
         "extent_cache": "auto",
@@ -1013,45 +1013,10 @@
       "srs-name": "900913",
       "status": "on",
       "extent": [
-        -178.15520178944752,
-        -85.051,
-        179.2036238941463,
-        83.32739899296284
-      ],
-      "advanced": {
-        "extent_from_subquery": "true"
-      }
-    },
-    {
-      "Datasource": {
-        "dbname": "osm",
-        "geometry_field": "way",
-        "host": "localhost",
-        "id": "milestones",
-        "key_field": "",
-        "password": "osm",
-        "port": "5432",
-        "project": "openriverboatmap",
-        "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
-        "table": "( SELECT way, tags->'milestone' as milestone FROM planet_osm_point\n  WHERE waterway='milestone') AS data",
-        "type": "postgis",
-        "user": "osm",
-        "extent_cache": "auto",
-        "extent": "-20037508,-19929239,20037508,19929239",
-        "extent_from_subquery": "true"
-      },
-      "class": "",
-      "geometry": "point",
-      "id": "milestones",
-      "name": "milestones",
-      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
-      "srs-name": "900913",
-      "status": "on",
-      "extent": [
-        -178.15520178944752,
-        -85.051,
-        179.2036238941463,
-        83.32739899296284
+        -179.99999692067183,
+        -84.96651228427099,
+        179.99999692067183,
+        84.96651228427098
       ],
       "advanced": {
         "extent_from_subquery": "true"
