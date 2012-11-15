@@ -440,7 +440,7 @@
 }
 
 #waterway_label::oneway[oneway=-1][zoom>=17],
-#waterway_label::oneway[oneway='alternat'][zoom>=17],
+#waterway_label::oneway[oneway='alternate'][zoom>=17],
 #waterway_label::oneway[oneway='yes'][zoom>=17] {
   text-name:"''";
   text-face-name: @sans;
@@ -458,8 +458,8 @@
   [oneway=-1] {
     text-name:"'←'";
   }
-  [oneway='alternat'] {
-    text-name:"'↮'";
+  [oneway='alternate'] {
+    text-name:"'←→'";
   }
 }
 
