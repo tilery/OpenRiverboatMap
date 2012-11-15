@@ -167,4 +167,5 @@ def purge(url):
     # is allowed to use PURGE
     parsed = urlparse(url)
     local_url = "%s://127.0.0.1%s" % (parsed.scheme, parsed.path)
+    run("{virtualenv_dir}/bin/tilestache-flushurl.py -c ~/tilestache.config {path}".format(virtualenv_dir=env.virtualenv_dir, path=parsed.path))
     run("curl -X PURGE {local_url}".format(local_url=local_url))
