@@ -26,7 +26,7 @@ Getting involved
 * indexes to create::
 
     CREATE INDEX idx_planet_osm_line_motorboat_waterway ON planet_osm_line USING btree(waterway,(tags->'motorboat')) WHERE waterway IS NOT NULL AND tags ? 'motorboat';
-
+    CREATE INDEX idx_planet_osm_polygon_leisure ON planet_osm_polygon USING btree(leisure) WHERE leisure IS NOT NULL;
 
 * start hacking the style, commit in a branch, and make a pull request! :)
 
