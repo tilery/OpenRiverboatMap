@@ -23,6 +23,11 @@ Getting involved
 
 * import some OSM data with `osm2pgsql <http://wiki.openstreetmap.org/wiki/Osm2pgsql>`_ , using default style but **with option --hstore-all** (or ping me to get a psql dump)
 
+* indexes to create::
+
+    CREATE INDEX idx_planet_osm_line_motorboat_waterway ON planet_osm_line USING btree(waterway,(tags->'motorboat')) WHERE waterway IS NOT NULL AND tags ? 'motorboat';
+
+
 * start hacking the style, commit in a branch, and make a pull request! :)
 
 
