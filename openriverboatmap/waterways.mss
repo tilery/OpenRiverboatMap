@@ -82,10 +82,15 @@ Map { background-color: @water; }
 	}
 	line-width: 2;
   [zoom>16] {
-	line-width: 3;
+    line-width: 3;
   }
 }
-
+#piers_polygons[zoom>=14] {
+  polygon-fill: @land;
+  [mooring='yes'] {
+    polygon-fill: @mooring;
+  }
+}
 /* ================================================================== */
 /* LOCKS
 /* ================================================================== */
