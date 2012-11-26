@@ -507,6 +507,10 @@
   text-label-position-tolerance: 10;
 }
 
+/* ================================================================== */
+/* WATERWAY SIGNS
+/* ================================================================== */
+
 #waterway_signs[sign='kilometer'][zoom>=16] {
   text-name: "[name]";
   text-face-name:@sans;
@@ -519,13 +523,27 @@
   text-label-position-tolerance: 10;
 }
 
-/* ================================================================== */
-/* WATERWAY SIGNS
-/* ================================================================== */
-
 #waterway_signs[zoom=18] {
   point-file: url("./icons/waterway/sign/[sign].png");
 //  point-transform: "scale(O.8)";
+}
+
+/* ================================================================== */
+/* PIERS
+/* ================================================================== */
+
+#piers::label[zoom>=17],
+#piers_polygons::label[zoom>=17]
+{
+  text-name: "[name]";
+  text-face-name:@sans;
+  text-placement:line;
+  text-fill:@marina_text;
+  text-size:10;
+  text-halo-fill:@marina_halo;
+  text-halo-radius:2;
+  text-wrap-width: 50;
+  text-label-position-tolerance: 10;
 }
 
 /* ****************************************************************** */
