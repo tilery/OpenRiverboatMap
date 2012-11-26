@@ -19,7 +19,7 @@ Design philosophy
 Getting involved
 ----------------
 
-* symlink the `openriverboatmap` directory into your TileMill projects directory (by default in `~/Documents/MapBow/project/`).
+* symlink the `openriverboatmap` directory into your TileMill projects directory (by default in `~/Documents/MapBox/project/`).
 
 * import some OSM data with `osm2pgsql <http://wiki.openstreetmap.org/wiki/Osm2pgsql>`_ , using default style but **with option --hstore-all** (or ping me to get a psql dump)
 
