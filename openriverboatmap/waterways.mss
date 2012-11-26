@@ -37,9 +37,6 @@ Map { background-color: @water; }
 /* WATER AREAS
 /* ================================================================== */
 
-
-#water_gen0[zoom>3][zoom<=9],
-#water_gen1[zoom>9][zoom<=12],
 #water[zoom>5],
 #landuse[type='basin'][zoom>=13]{
   polygon-fill: @water;
