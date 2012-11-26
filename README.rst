@@ -25,7 +25,7 @@ Getting involved
 
 * indexes to create::
 
-    CREATE INDEX idx_planet_osm_line_motorboat_waterway ON planet_osm_line USING btree(waterway,(tags->'motorboat')) WHERE waterway IS NOT NULL AND tags ? 'motorboat';
+    CREATE INDEX idx_planet_osm_line_motorboat_waterway ON planet_osm_line USING btree(waterway,(tags->'motorboat'),(tags->'CEMT')) WHERE waterway IS NOT NULL AND (tags ? 'motorboat' or tags ? 'CEMT');
     CREATE INDEX idx_planet_osm_polygon_leisure ON planet_osm_polygon USING btree(leisure) WHERE leisure IS NOT NULL;
     CREATE INDEX idx_planet_osm_polygon_waterway ON planet_osm_polygon USING btree(waterway,way_area) WHERE waterway IS NOT NULL;
     CREATE INDEX idx_planet_osm_polygon_natural ON planet_osm_polygon USING btree("natural",way_area) WHERE "natural" IS NOT NULL;
