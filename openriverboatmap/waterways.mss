@@ -40,7 +40,7 @@ Map { background-color: @water; }
 #water[zoom>5],
 #landuse[type='basin'][zoom>=13]{
   polygon-fill: @water;
-  [motorboat='yes'] { polygon-fill: @navigable;}
+  [navigable='yes'] { polygon-fill: @navigable;}
 }
 
 /* ================================================================== */
