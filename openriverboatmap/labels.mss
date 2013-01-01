@@ -528,6 +528,34 @@
 //  point-transform: "scale(O.8)";
 }
 
+#waterway_network::draft[zoom>=16] {
+[cemt="I"][draft<1.8],
+[cemt="II"][draft<2.5],
+[cemt="III"][draft<2.5],
+[cemt="IV"][draft<2.5],
+[cemt="V"][draft<2.5],
+[cemt="VI"][draft<3.9] {
+  marker-width:18;
+  marker-fill:#fff;
+  marker-line-color:red;
+  marker-line-opacity:1;
+  marker-allow-overlap:true;
+  ::labels {
+    text-name: "[draft]";
+    text-face-name:"Arial Bold";
+    text-allow-overlap:true;
+    text-size:9;
+    text-dy: 0;
+  }
+  ::triangle {
+    text-name: "'▲'";
+    text-face-name:"Arial Bold";
+    text-allow-overlap:true;
+    text-size:6;
+    text-dy: 3;
+  }
+}}
+
 /* ================================================================== */
 /* PIERS
 /* ================================================================== */
