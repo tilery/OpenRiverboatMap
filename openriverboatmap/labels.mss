@@ -523,9 +523,12 @@
   text-label-position-tolerance: 10;
 }
 
-#waterway_signs[zoom=18] {
-  point-file: url("./icons/waterway/sign/[sign].png");
-//  point-transform: "scale(O.8)";
+#waterway_signs[zoom>=16] {
+  marker-file: url("./icons/waterway/sign/[sign].png");
+  marker-width: 15;
+  [zoom=18] {
+    marker-width: 20;
+  }
 }
 
 #waterway_network::draft[zoom>=16] {
