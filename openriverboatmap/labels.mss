@@ -556,6 +556,21 @@
   }
 }}
 
+#waterway_network::maxspeed[zoom>=16] {
+  marker-width:18;
+  marker-fill:#fff;
+  marker-line-color:red;
+  marker-line-opacity:1;
+  marker-allow-overlap:true;
+  ::labels {
+    text-name: "[maxspeed]";
+    text-face-name:"Arial Bold";
+    text-size:9;
+    text-allow-overlap:true;
+  }
+}
+
+
 /* ================================================================== */
 /* PIERS
 /* ================================================================== */
