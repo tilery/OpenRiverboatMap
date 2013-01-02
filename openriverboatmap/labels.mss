@@ -556,7 +556,7 @@
   }
 }}
 
-#waterway_network::maxspeed[zoom>=16] {
+#waterway_network::maxspeed[maxspeed!=null][zoom>=16] {
   marker-width:18;
   marker-fill:#fff;
   marker-line-color:red;
