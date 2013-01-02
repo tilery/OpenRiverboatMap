@@ -34,6 +34,8 @@ Getting involved
     CREATE INDEX idx_planet_osm_line_man_made ON planet_osm_line USING btree(man_made) WHERE man_made IS NOT NULL;
     CREATE INDEX idx_planet_osm_polygon_man_made ON planet_osm_polygon USING btree(man_made) WHERE man_made IS NOT NULL;
 
+* for customizing local database connection, you can use `CartoCC <https://github.com/yohanboniface/CartoCC>`_
+
 * start hacking the style, commit in a branch, and make a pull request! :)
 
 
