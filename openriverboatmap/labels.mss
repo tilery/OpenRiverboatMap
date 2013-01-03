@@ -538,24 +538,19 @@
 [cemt="IV"][draft<2.5],
 [cemt="V"][draft<2.5],
 [cemt="VI"][draft<3.9] {
-  marker-width:18;
-  marker-fill:#fff;
-  marker-line-color:red;
-  marker-line-opacity:1;
-  marker-allow-overlap:true;
-  ::labels {
-    text-name: "[draft]";
-    text-face-name:"Arial Bold";
-    text-allow-overlap:true;
-    text-size:9;
-    text-dy: 0;
-  }
-  ::triangle {
-    text-name: "'▲'";
-    text-face-name:"Arial Bold";
-    text-allow-overlap:true;
-    text-size:6;
-    text-dy: 3;
+  shield-name: "[draft]";
+  shield-fill:#000;
+  shield-face-name:@sans;
+  shield-size:8;
+  shield-placement: line;
+  shield-spacing: 300;
+  shield-file: url('./icons/waterway/sign/maxdraft_17.svg');
+  shield-text-dy: -2;
+  shield-avoid-edges: true;
+  [zoom=18] {
+    shield-file: url('./icons/waterway/sign/maxdraft_18.svg');
+    shield-spacing: 400;
+    shield-size:9;
   }
 }}
 
@@ -565,11 +560,12 @@
   shield-face-name:@sans;
   shield-size:8;
   shield-placement: line;
-  shield-min-distance: 100;
+  shield-spacing: 200;
   shield-file: url('./icons/waterway/sign/no_17.svg');
+  shield-avoid-edges: true;
   [zoom=18] {
     shield-file: url('./icons/waterway/sign/no_18.svg');
-    shield-min-distance: 200;
+    shield-spacing: 300;
     shield-size:9;
   }
 }
