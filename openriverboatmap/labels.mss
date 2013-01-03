@@ -560,16 +560,17 @@
 }}
 
 #waterway_network::maxspeed[maxspeed!=null][zoom>=16] {
-  marker-width:18;
-  marker-fill:#fff;
-  marker-line-color:red;
-  marker-line-opacity:1;
-  marker-allow-overlap:true;
-  ::labels {
-    text-name: "[maxspeed]";
-    text-face-name:"Arial Bold";
-    text-size:9;
-    text-allow-overlap:true;
+  shield-name: "[maxspeed]";
+  shield-fill:#000;
+  shield-face-name:@sans;
+  shield-size:8;
+  shield-placement: line;
+  shield-min-distance: 100;
+  shield-file: url('./icons/waterway/sign/no_17.svg');
+  [zoom=18] {
+    shield-file: url('./icons/waterway/sign/no_18.svg');
+    shield-min-distance: 200;
+    shield-size:9;
   }
 }
 
