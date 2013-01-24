@@ -25,15 +25,8 @@
   "Layer": [
     {
       "Datasource": {
-        "dbname": "osm",
         "file": "http://mapbox-geodata.s3.amazonaws.com/natural-earth-1.3.0/physical/10m-land.zip",
-        "host": "localhost",
-        "id": "land",
-        "password": "osm",
-        "port": "5432",
-        "project": "foss4g-2011",
-        "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
-        "user": "osm"
+        "type": "shape"
       },
       "class": "shp",
       "geometry": "polygon",
@@ -44,7 +37,8 @@
     },
     {
       "Datasource": {
-        "file": "http://tilemill-data.s3.amazonaws.com/osm/coastline-good.zip"
+        "file": "http://tilemill-data.s3.amazonaws.com/osm/coastline-good.zip",
+        "type": "shape"
       },
       "class": "shp",
       "geometry": "polygon",
@@ -55,7 +49,8 @@
     },
     {
       "Datasource": {
-        "file": "http://tilemill-data.s3.amazonaws.com/osm/shoreline_300.zip"
+        "file": "http://tilemill-data.s3.amazonaws.com/osm/shoreline_300.zip",
+        "type": "shape"
       },
       "class": "shp",
       "geometry": "polygon",
@@ -570,7 +565,8 @@
     },
     {
       "Datasource": {
-        "file": "http://mapbox-geodata.s3.amazonaws.com/natural-earth-1.4.0/cultural/10m-populated-places-simple.zip"
+        "file": "http://mapbox-geodata.s3.amazonaws.com/natural-earth-1.4.0/cultural/10m-populated-places-simple.zip",
+        "type": "shape"
       },
       "class": "shp",
       "geometry": "point",
