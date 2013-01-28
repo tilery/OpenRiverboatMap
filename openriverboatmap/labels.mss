@@ -407,21 +407,38 @@
 /* WATERWAY LABELS
 /* ================================================================== */
 
-#waterway_label[type='river'][zoom>=13][zoom<18],
-#waterway_label[type='canal'][zoom>=15][zoom<18],
+#waterway_label[type='river'][zoom>=7][zoom<18],
+#waterway_label[type='canal'][zoom>=7][zoom<18],
 #waterway_label[type='stream'][zoom>=17] {
-  text-fill: @water * 0.75;
-  text-halo-fill: fadeout(lighten(@water,5%),25%);
-  [motorboat='yes'] {
-    text-fill: #fff * 0.75;
-    text-halo-fill: fadeout(lighten(@navigable,5%),25%);
+  [type='river'][motorboat='yes'][zoom<13],
+  [type='canal'][motorboat='yes'][zoom<13] {
+    text-fill: @navigable;
+    text-halo-fill: fadeout(#fff,25%);
+    text-name: '[name]';
+    text-face-name: @sans_italic;
+    text-halo-radius: 2;
+    text-min-distance: 100;
+    text-size: 10;
+    text-label-position-tolerance: 10;
+    text-placement: line;
+    [zoom<=9] {
+      text-placement: point;
+    }
   }
-  text-name: '[name]';
-  text-face-name: @sans_italic;
-  text-halo-radius: 1;
-  text-placement: line;
-  text-min-distance: 400;
-  text-size: 10;
+  [zoom>=13] {
+    text-fill: @water * 0.75;
+    text-halo-fill: fadeout(lighten(@water,5%),25%);
+    [motorboat='yes'] {
+      text-fill: #fff * 0.75;
+      text-halo-fill: fadeout(lighten(@navigable,5%),25%);
+    }
+    text-name: '[name]';
+    text-face-name: @sans_italic;
+    text-halo-radius: 1;
+    text-placement: line;
+    text-min-distance: 400;
+    text-size: 10;
+  }
   [type='river'][zoom=14],
   [type='canal'][zoom=16],
   [type='stream'][zoom=18] {
