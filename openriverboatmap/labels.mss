@@ -87,15 +87,16 @@
 
 /* ---- Cities ------------------------------------------------------ */
 
-#place::city[type='city'][zoom>=10][zoom<=15] {
+#place::city[type='city'][zoom>=8][zoom<=15] {
   text-name:'[name]';
-  text-face-name:@sans;
+  text-face-name:@sans_italic;
   text-placement:point;
   text-fill:@city_text;
   text-halo-fill:@city_halo;
   text-halo-radius:2;
+  text-transform: uppercase;
   [zoom<=8] {
-    text-size: 10;
+    text-size: 9;
     text-halo-radius:1;
   }
   [zoom=9] {
@@ -120,19 +121,16 @@
     text-size:14;
     text-character-spacing: 2;
     text-wrap-width: 200;
-    text-transform: uppercase;
   }
   [zoom=14] {
     text-size:15;
     text-character-spacing: 4;
     text-wrap-width: 300;
-    text-transform: uppercase;
   }
   [zoom=15] {
     text-size:16;
     text-character-spacing: 6;
     text-wrap-width: 400;
-    text-transform: uppercase;
   }
 }
 
