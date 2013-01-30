@@ -69,13 +69,13 @@ Map { background-color: @water; }
 #piers::outline[zoom>=14][mooring='yes'] {
 	line-color: #ddd;
 	line-width: 3;
-    line-cap: round;
+  line-cap: round;
   [zoom>16] {
 	line-width: 5;
   }
 }
 #piers[zoom>=14] {
-    line-cap: butt;
+  line-cap: butt;
 	line-color: @land;
 	[mooring='yes'] {
 		line-color: @mooring;

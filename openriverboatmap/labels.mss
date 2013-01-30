@@ -507,6 +507,16 @@
   text-wrap-width: 50;
   text-label-position-tolerance: 10;
 }
+#piers::symbol[mooring='yes'][zoom>=10][zoom<14] {
+  text-name:"'P'";
+  text-face-name:@sans;
+  text-placement:point;
+  text-fill:@harbour_text;
+  text-halo-fill:@harbour_halo;
+  text-halo-radius:2;
+  text-size:12;
+  text-label-position-tolerance: 10;
+}
 
 /* ================================================================== */
 /* WATERWAY SIGNS
