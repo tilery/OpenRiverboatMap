@@ -352,11 +352,8 @@
   text-fill:@road_text;
   text-halo-fill:@road_halo;
   text-halo-radius:1;
-  text-min-distance:60;
+  text-min-distance: 200;
   text-size:10;
-  [zoom=11] { text-min-distance:70; }
-  [zoom=12] { text-min-distance:80; }
-  [zoom=13] { text-min-distance:100; }
 }
 
 #mainroad_label[type='primary'][zoom>12],
@@ -368,7 +365,7 @@
   text-fill:@road_text;
   text-halo-fill:@road_halo;
   text-halo-radius:1;
-  text-min-distance:60;
+  text-min-distance:100;
   text-size:11;
 }
 
