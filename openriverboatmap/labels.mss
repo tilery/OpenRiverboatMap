@@ -405,51 +405,39 @@
 /* WATERWAY LABELS
 /* ================================================================== */
 
-#waterway_label[type='river'][zoom>=7][zoom<18],
-#waterway_label[type='canal'][zoom>=7][zoom<18],
+#waterway_label[type='river'][zoom>=13][zoom<18],
+#waterway_label[type='canal'][zoom>=13][zoom<18],
+#waterway_label[motorboat='yes'][zoom>=7][zoom<18],
 #waterway_label[type='stream'][zoom>=17] {
+  text-fill: @water * 0.75;
+  text-halo-fill: fadeout(lighten(@water,5%),25%);
+  text-name: "[name].replace('([\S\ ])','$1 ')";
+  text-face-name: @sans_italic;
+  text-placement: line;
+  text-size: 10;
+  [motorboat='yes'] {
+    text-fill: @navigable_text;
+    text-halo-fill: fadeout(#fff,25%);
+  }
   [type='river'][motorboat='yes'][zoom<13],
   [type='canal'][motorboat='yes'][zoom<13] {
-    text-fill: @navigable;
-    text-halo-fill: fadeout(#fff,25%);
-    text-name: '[name]';
-    text-face-name: @sans_italic;
     text-halo-radius: 2;
     text-min-distance: 100;
-    text-size: 10;
     text-label-position-tolerance: 10;
-    text-placement: line;
-    [zoom<=9] {
+    [zoom<=10] {
       text-placement: point;
     }
   }
   [zoom>=13] {
-    text-fill: @water * 0.75;
-    text-halo-fill: fadeout(lighten(@water,5%),25%);
-    [motorboat='yes'] {
-      text-fill: #fff * 0.75;
-      text-halo-fill: fadeout(lighten(@navigable,5%),25%);
-    }
-    text-name: '[name]';
-    text-face-name: @sans_italic;
     text-halo-radius: 1;
-    text-placement: line;
     text-min-distance: 400;
-    text-size: 10;
-  }
-  [type='river'][zoom=14],
-  [type='canal'][zoom=16],
-  [type='stream'][zoom=18] {
-    text-name: "[name].replace('([\S\ ])','$1 ')";
   }
   [type='river'][zoom=15],
   [type='canal'][zoom=17] {
     text-size: 11;
-    text-name: "[name].replace('([\S\ ])','$1 ')";
   }
   [type='river'][zoom>=16] {
     text-size: 14;
-    text-name: "[name].replace('([\S\ ])','$1 ')";
     text-spacing: 300;
   }
 }

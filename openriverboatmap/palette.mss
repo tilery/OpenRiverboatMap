@@ -39,7 +39,6 @@ Map { font-directory: url(./fonts); }
 
 @land:              #FCFBE7;
 @water:             #C4DFF6;
-@navigable:         #387084;
 @grass:             #E6F2C1;
 @beach:             #FFEEC7;
 @park:              #DAF2C1;
@@ -48,6 +47,10 @@ Map { font-directory: url(./fonts); }
 @mooring:           #13272e; //#13272e #252305
 @stone:             #ceba82;
 @agriculture:       #F2E8B6;
+@navigable:         #83B295; //#387084;
+@navigable_high:   darken(@navigable, 20%);
+@navigable_medium:   darken(@navigable, 10%);
+@navigable_text:   darken(@navigable, 40%);
 
 @building:          #E4E0E0;
 @hospital:          rgb(229,198,195);

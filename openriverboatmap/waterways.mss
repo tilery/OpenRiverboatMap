@@ -1,7 +1,10 @@
 Map { background-color: @water; }
 
 #waterway_network[zoom>=5][zoom<=12][navigable='yes'] {
-  line-color: @navigable;
+  line-color: @navigable_high;
+  [zoom>=11] {
+    line-color: @navigable_medium;
+  }
   [zoom=5] {
     [type='river'] { line-width: 0.5; }
     [type='canal'] { line-width: 0.25; } }
