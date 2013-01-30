@@ -50,7 +50,7 @@ Map { font-directory: url(./fonts); }
 @navigable:         #83B295; //#387084;
 @navigable_high:   darken(@navigable, 20%);
 @navigable_medium:   darken(@navigable, 10%);
-@navigable_text:   darken(@navigable, 40%);
+@navigable_text:   darken(@navigable, 20%);
 
 @building:          #E4E0E0;
 @hospital:          rgb(229,198,195);
