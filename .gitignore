@@ -5,3 +5,4 @@ cache
 openriverboatmap/layers
 openriverboatmap/cartocc.json
 openriverboatmap/project.mml
+node_modules/*
