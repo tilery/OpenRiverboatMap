@@ -813,6 +813,41 @@
         "dbname": "osm",
         "geometry_field": "way",
         "host": "localhost",
+        "id": "groyne",
+        "key_field": "",
+        "password": "osm",
+        "port": "5432",
+        "project": "foss4g-2011",
+        "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+        "table": "( SELECT way, man_made\n  FROM planet_osm_line\n  WHERE man_made='groyne') AS data",
+        "type": "postgis",
+        "user": "osm",
+        "extent_cache": "auto",
+        "extent": "-20037508,-19929239,20037508,19929239",
+        "extent_from_subquery": "true"
+      },
+      "class": "",
+      "geometry": "linestring",
+      "id": "groyne",
+      "name": "groyne",
+      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+      "srs-name": "900913",
+      "status": "on",
+      "extent": [
+        -179.99999692067183,
+        -84.96651228427099,
+        179.99999692067183,
+        84.96651228427098
+      ],
+      "advanced": {
+        "extent_from_subquery": "true"
+      }
+    },
+    {
+      "Datasource": {
+        "dbname": "osm",
+        "geometry_field": "way",
+        "host": "localhost",
         "id": "locks",
         "key_field": "",
         "password": "osm",

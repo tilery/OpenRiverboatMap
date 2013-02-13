@@ -85,3 +85,11 @@ Map { background-color: @water; }
 #piers_polygons[zoom>=14] {
   polygon-fill: @land;
 }
+#groyne[zoom>=14] {
+  line-cap: butt;
+  line-color: @land;
+  line-width: 1;
+  [zoom>16] {
+    line-width: 2;
+  }
+}
