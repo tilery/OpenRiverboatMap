@@ -472,7 +472,7 @@
 #marinas[harbour=null][zoom>=10][zoom<18] {
   text-name:"''";
   text-face-name:@sans;
-  text-placement:point;
+  text-placement: point;
   text-fill:@harbour_text;
   text-halo-fill:@harbour_halo;
   text-halo-radius:2;
