@@ -41,11 +41,14 @@ Map { background-color: @water; }
 /* ================================================================== */
 
 #water[zoom>5],
-#landuse[type='basin'][zoom>=13]{
+#landuse[type='basin'][zoom>=13] {
   polygon-fill: @water;
   [navigable='yes'] { polygon-fill: @navigable;}
 }
 
+#navigable_water[zoom>=13] {
+	polygon-fill: @navigable;
+}
 /* ================================================================== */
 /* MARINAS
 /* ================================================================== */
