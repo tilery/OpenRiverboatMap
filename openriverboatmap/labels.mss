@@ -473,7 +473,7 @@
   ::symbol {
     text-face-name:@sans;
     text-placement: point;
-    text-min-distance: 0;
+    text-min-distance: 10;
     text-fill:@harbour_text;
     text-halo-fill:@harbour_halo;
     text-halo-radius:2;
