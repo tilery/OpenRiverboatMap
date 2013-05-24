@@ -470,31 +470,44 @@
 
 #marinas[harbour=true][zoom>=7][zoom<18],
 #marinas[harbour=null][zoom>=10][zoom<18] {
-  text-name:"''";
-  text-face-name:@sans;
-  text-placement: point;
-  text-fill:@harbour_text;
-  text-halo-fill:@harbour_halo;
-  text-halo-radius:2;
-  text-size:12;
-  text-label-position-tolerance: 10;
-}
-#marinas[harbour=true][zoom>=7][zoom<=14] {
-  text-name:"'⚓ ' + [name].replace('[Hh]alte ([Nn]autique )?(de |du |d\')','').replace('[Pp]ort (de [Pp]laisance )?(de |du |d\')','')";
-}
-#marinas[harbour=null][zoom>=10][zoom<=14] {
-  text-name:"'⚑ ' + [name].replace('[Hh]alte ([Nn]autique )?(de |du |d\')','').replace('[Pp]ort (de [Pp]laisance )?(de |du |d\')','')";
-  text-fill:@marina_text;
-  text-halo-fill:@marina_halo;
-}
-// Do not display harbours icons at level 18
-// because we already display waterway signs,
-// and we want to give preference to them
-#marinas[harbour=true][zoom>14][zoom<18] {
-  text-name:"'⚓'";
-}
-#marinas[harbour=null][zoom>14][zoom<18] {
-  text-name:"'⚑'";
+  ::symbol {
+    text-face-name:@sans;
+    text-placement: point;
+    text-min-distance: 0;
+    text-fill:@harbour_text;
+    text-halo-fill:@harbour_halo;
+    text-halo-radius:2;
+    text-size:12;
+    text-name:"'⚓'";
+  	[harbour!=true] {
+      text-name:"'⚑'";
+  	}
+/*    marker-fill: @harbour_text;
+    marker-line-width: 2;*/
+  }
+  ::label {
+    text-dy: 10;
+    text-dx: 10;
+    text-name:"''";
+    text-face-name:@sans;
+    text-placement: point;
+    text-fill:@harbour_text;
+    text-halo-fill:@harbour_halo;
+    text-halo-radius:2;
+    text-size:12;
+    text-label-position-tolerance: 10;
+    text-placement-type: simple;
+    text-placements: "E,W,N,S,NE,NW,SE,SW";
+    text-min-distance: 2;
+    [harbour=true][zoom>=7][zoom<=14] {
+      text-name:"[name].replace('[Hh]alte ([Nn]autique )?(de |du |d\')','').replace('[Pp]ort (de [Pp]laisance )?(de |du |d\')','')";
+    }
+    [harbour!=true][zoom>=10][zoom<=14] {
+      text-name:"[name].replace('[Hh]alte ([Nn]autique )?(de |du |d\')','').replace('[Pp]ort (de [Pp]laisance )?(de |du |d\')','')";
+      text-fill:@marina_text;
+      text-halo-fill:@marina_halo;
+    }
+  }
 }
 #locks::label[zoom>=16] {
   text-name: "'⇅ ' + [lock_name]";

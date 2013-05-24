@@ -175,7 +175,7 @@
         "port": "5432",
         "project": "foss4g-2011",
         "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
-        "table": "( SELECT way, way_area AS area, tags->'motorboat' as motorboat, waterway AS type, tags->'CEMT' as cemt, CASE WHEN tags->'motorboat'='yes' THEN 'yes' WHEN tags ? 'CEMT' THEN 'yes' ELSE 'no' END as navigable\n  FROM planet_osm_polygon\n  WHERE \"natural\" IN ('water', 'pond')\n    OR waterway IN ('basin', 'canal', 'mill_pond', 'pond', 'riverbank', 'stream', 'lock')\n) AS data",
+        "table": "( SELECT way, way_area AS area, tags->'motorboat' as motorboat, waterway AS type, tags->'CEMT' as cemt, CASE WHEN tags->'motorboat'='yes' THEN 'yes' WHEN tags ? 'CEMT' THEN 'yes' ELSE 'no' END as navigable\n  FROM planet_osm_polygon\n  WHERE \"natural\" IN ('water', 'pond')\n OR waterway IN ('basin', 'canal', 'mill_pond', 'pond', 'riverbank', 'stream', 'lock')\n) AS data",
         "type": "postgis",
         "user": "osm",
         "extent_cache": "auto",
@@ -883,6 +883,41 @@
         "dbname": "osm",
         "geometry_field": "way",
         "host": "localhost",
+        "id": "marinas",
+        "key_field": "",
+        "password": "osm",
+        "port": "5432",
+        "project": "openriverboatmap",
+        "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+        "table": "( SELECT way, COALESCE(tags->'harbour:namenational', name, tags->'int_name') as name, CAST(harbour as BOOLEAN) FROM planet_osm_point\n  WHERE leisure='marina' OR harbour='yes' UNION SELECT way, COALESCE(name, tags->'int_name') as name, null as harbour FROM planet_osm_polygon\n  WHERE leisure='marina' order by harbour) AS data",
+        "type": "postgis",
+        "user": "osm",
+        "extent_cache": "auto",
+        "extent": "-20037508,-19929239,20037508,19929239",
+        "extent_from_subquery": "true"
+      },
+      "class": "",
+      "geometry": "point",
+      "id": "marinas",
+      "name": "marinas",
+      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+      "srs-name": "900913",
+      "status": "on",
+      "extent": [
+        -178.15520178944752,
+        -85.051,
+        179.2036238941463,
+        83.32739899296284
+      ],
+      "advanced": {
+        "extent_from_subquery": "true"
+      }
+    },
+    {
+      "Datasource": {
+        "dbname": "osm",
+        "geometry_field": "way",
+        "host": "localhost",
         "id": "waterway_label",
         "key_field": "",
         "password": "osm",
@@ -943,41 +978,6 @@
         -84.96651228427099,
         179.99999692067183,
         84.96651228427098
-      ],
-      "advanced": {
-        "extent_from_subquery": "true"
-      }
-    },
-    {
-      "Datasource": {
-        "dbname": "osm",
-        "geometry_field": "way",
-        "host": "localhost",
-        "id": "marinas",
-        "key_field": "",
-        "password": "osm",
-        "port": "5432",
-        "project": "openriverboatmap",
-        "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
-        "table": "( SELECT way, COALESCE(tags->'harbour:namenational', name, tags->'int_name') as name, CAST(harbour as BOOLEAN) FROM planet_osm_point\n  WHERE leisure='marina' OR harbour='yes' UNION SELECT way, COALESCE(name, tags->'int_name') as name, null as harbour FROM planet_osm_polygon\n  WHERE leisure='marina') AS data",
-        "type": "postgis",
-        "user": "osm",
-        "extent_cache": "auto",
-        "extent": "-20037508,-19929239,20037508,19929239",
-        "extent_from_subquery": "true"
-      },
-      "class": "",
-      "geometry": "point",
-      "id": "marinas",
-      "name": "marinas",
-      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
-      "srs-name": "900913",
-      "status": "on",
-      "extent": [
-        -178.15520178944752,
-        -85.051,
-        179.2036238941463,
-        83.32739899296284
       ],
       "advanced": {
         "extent_from_subquery": "true"
