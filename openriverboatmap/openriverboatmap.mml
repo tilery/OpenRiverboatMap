@@ -599,6 +599,76 @@
     },
     {
       "Datasource": {
+        "dbname": "osm",
+        "geometry_field": "way",
+        "host": "localhost",
+        "id": "piers_polygons",
+        "key_field": "",
+        "password": "osm",
+        "port": "5432",
+        "project": "openriverboatmap",
+        "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+        "table": "( SELECT way, man_made, tags->'mooring' as mooring, name\n  FROM planet_osm_polygon\n  WHERE man_made='pier') AS data",
+        "type": "postgis",
+        "user": "osm",
+        "extent_cache": "auto",
+        "extent": "-20037508,-19929239,20037508,19929239",
+        "extent_from_subquery": "true"
+      },
+      "class": "",
+      "geometry": "polygon",
+      "id": "piers_polygons",
+      "name": "piers_polygons",
+      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+      "srs-name": "900913",
+      "status": "on",
+      "extent": [
+        -179.99999692067183,
+        -84.96651228427099,
+        179.99999692067183,
+        84.96651228427098
+      ],
+      "advanced": {
+        "extent_from_subquery": "true"
+      }
+    },
+    {
+      "Datasource": {
+        "dbname": "osm",
+        "geometry_field": "way",
+        "host": "localhost",
+        "id": "piers",
+        "key_field": "",
+        "password": "osm",
+        "port": "5432",
+        "project": "foss4g-2011",
+        "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+        "table": "( SELECT way, man_made, tags->'mooring' as mooring, name\n  FROM planet_osm_line\n  WHERE man_made='pier') AS data",
+        "type": "postgis",
+        "user": "osm",
+        "extent_cache": "auto",
+        "extent": "-20037508,-19929239,20037508,19929239",
+        "extent_from_subquery": "true"
+      },
+      "class": "",
+      "geometry": "linestring",
+      "id": "piers",
+      "name": "piers",
+      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+      "srs-name": "900913",
+      "status": "on",
+      "extent": [
+        -179.99999692067183,
+        -84.96651228427099,
+        179.99999692067183,
+        84.96651228427098
+      ],
+      "advanced": {
+        "extent_from_subquery": "true"
+      }
+    },
+    {
+      "Datasource": {
         "file": "http://mapbox-geodata.s3.amazonaws.com/natural-earth-1.4.0/cultural/10m-populated-places-simple.zip",
         "type": "shape"
       },
@@ -609,6 +679,111 @@
       "srs": "",
       "srs-name": "autodetect",
       "status": "off"
+    },
+    {
+      "Datasource": {
+        "dbname": "osm",
+        "geometry_field": "way",
+        "host": "localhost",
+        "id": "marinas",
+        "key_field": "",
+        "password": "osm",
+        "port": "5432",
+        "project": "openriverboatmap",
+        "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+        "table": "( SELECT way, COALESCE(tags->'harbour:namenational', name, tags->'int_name') as name, CAST(harbour as BOOLEAN) FROM planet_osm_point\n  WHERE leisure='marina' OR harbour='yes' UNION SELECT way, COALESCE(name, tags->'int_name') as name, null as harbour FROM planet_osm_polygon\n  WHERE leisure='marina' order by harbour) AS data",
+        "type": "postgis",
+        "user": "osm",
+        "extent_cache": "auto",
+        "extent": "-20037508,-19929239,20037508,19929239",
+        "extent_from_subquery": "true"
+      },
+      "class": "",
+      "geometry": "point",
+      "id": "marinas",
+      "name": "marinas",
+      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+      "srs-name": "900913",
+      "status": "on",
+      "extent": [
+        -178.15520178944752,
+        -85.051,
+        179.2036238941463,
+        83.32739899296284
+      ],
+      "advanced": {
+        "extent_from_subquery": "true"
+      }
+    },
+    {
+      "Datasource": {
+        "dbname": "osm",
+        "geometry_field": "way",
+        "host": "localhost",
+        "id": "piers_symbol",
+        "key_field": "",
+        "password": "osm",
+        "port": "5432",
+        "project": "foss4g-2011",
+        "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+        "table": "( SELECT way, man_made, tags->'mooring' as mooring, name\n  FROM planet_osm_line\n  WHERE man_made='pier') AS data",
+        "type": "postgis",
+        "user": "osm",
+        "extent_cache": "auto",
+        "extent": "-20037508,-19929239,20037508,19929239",
+        "extent_from_subquery": "true"
+      },
+      "class": "",
+      "geometry": "linestring",
+      "id": "piers_symbol",
+      "name": "piers_symbol",
+      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+      "srs-name": "900913",
+      "status": "on",
+      "extent": [
+        -179.99999692067183,
+        -84.96651228427099,
+        179.99999692067183,
+        84.96651228427098
+      ],
+      "advanced": {
+        "extent_from_subquery": "true"
+      }
+    },
+    {
+      "Datasource": {
+        "dbname": "osm",
+        "geometry_field": "way",
+        "host": "localhost",
+        "id": "waterway_label",
+        "key_field": "",
+        "password": "osm",
+        "port": "5432",
+        "project": "foss4g-2011",
+        "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+        "table": "( SELECT way, waterway AS type, name, tags->'motorboat' as motorboat,oneway\n  FROM planet_osm_line\n  WHERE waterway IN ('canal', 'river', 'stream') \n    AND name IS NOT NULL\n) AS data",
+        "type": "postgis",
+        "user": "osm",
+        "extent_cache": "auto",
+        "extent": "-20037508,-19929239,20037508,19929239",
+        "extent_from_subquery": "true"
+      },
+      "class": "",
+      "geometry": "linestring",
+      "id": "waterway_label",
+      "name": "waterway_label",
+      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+      "srs-name": "900913",
+      "status": "on",
+      "extent": [
+        -179.99999692067183,
+        -84.96651228427099,
+        179.99999692067183,
+        84.96651228427098
+      ],
+      "advanced": {
+        "extent_from_subquery": "true"
+      }
     },
     {
       "Datasource": {
@@ -710,111 +885,6 @@
         -85.051,
         179.2036238941463,
         83.32739899296284
-      ],
-      "advanced": {
-        "extent_from_subquery": "true"
-      }
-    },
-    {
-      "Datasource": {
-        "dbname": "osm",
-        "geometry_field": "way",
-        "host": "localhost",
-        "id": "marinas",
-        "key_field": "",
-        "password": "osm",
-        "port": "5432",
-        "project": "openriverboatmap",
-        "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
-        "table": "( SELECT way, COALESCE(tags->'harbour:namenational', name, tags->'int_name') as name, CAST(harbour as BOOLEAN) FROM planet_osm_point\n  WHERE leisure='marina' OR harbour='yes' UNION SELECT way, COALESCE(name, tags->'int_name') as name, null as harbour FROM planet_osm_polygon\n  WHERE leisure='marina' order by harbour) AS data",
-        "type": "postgis",
-        "user": "osm",
-        "extent_cache": "auto",
-        "extent": "-20037508,-19929239,20037508,19929239",
-        "extent_from_subquery": "true"
-      },
-      "class": "",
-      "geometry": "point",
-      "id": "marinas",
-      "name": "marinas",
-      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
-      "srs-name": "900913",
-      "status": "on",
-      "extent": [
-        -178.15520178944752,
-        -85.051,
-        179.2036238941463,
-        83.32739899296284
-      ],
-      "advanced": {
-        "extent_from_subquery": "true"
-      }
-    },
-    {
-      "Datasource": {
-        "dbname": "osm",
-        "geometry_field": "way",
-        "host": "localhost",
-        "id": "piers",
-        "key_field": "",
-        "password": "osm",
-        "port": "5432",
-        "project": "foss4g-2011",
-        "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
-        "table": "( SELECT way, man_made, tags->'mooring' as mooring, name\n  FROM planet_osm_line\n  WHERE man_made='pier') AS data",
-        "type": "postgis",
-        "user": "osm",
-        "extent_cache": "auto",
-        "extent": "-20037508,-19929239,20037508,19929239",
-        "extent_from_subquery": "true"
-      },
-      "class": "",
-      "geometry": "linestring",
-      "id": "piers",
-      "name": "piers",
-      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
-      "srs-name": "900913",
-      "status": "on",
-      "extent": [
-        -179.99999692067183,
-        -84.96651228427099,
-        179.99999692067183,
-        84.96651228427098
-      ],
-      "advanced": {
-        "extent_from_subquery": "true"
-      }
-    },
-    {
-      "Datasource": {
-        "dbname": "osm",
-        "geometry_field": "way",
-        "host": "localhost",
-        "id": "waterway_label",
-        "key_field": "",
-        "password": "osm",
-        "port": "5432",
-        "project": "foss4g-2011",
-        "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
-        "table": "( SELECT way, waterway AS type, name, tags->'motorboat' as motorboat,oneway\n  FROM planet_osm_line\n  WHERE waterway IN ('canal', 'river', 'stream') \n    AND name IS NOT NULL\n) AS data",
-        "type": "postgis",
-        "user": "osm",
-        "extent_cache": "auto",
-        "extent": "-20037508,-19929239,20037508,19929239",
-        "extent_from_subquery": "true"
-      },
-      "class": "",
-      "geometry": "linestring",
-      "id": "waterway_label",
-      "name": "waterway_label",
-      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
-      "srs-name": "900913",
-      "status": "on",
-      "extent": [
-        -179.99999692067183,
-        -84.96651228427099,
-        179.99999692067183,
-        84.96651228427098
       ],
       "advanced": {
         "extent_from_subquery": "true"
@@ -978,41 +1048,6 @@
         -85.051,
         179.2036238941463,
         83.32739899296284
-      ],
-      "advanced": {
-        "extent_from_subquery": "true"
-      }
-    },
-    {
-      "Datasource": {
-        "dbname": "osm",
-        "geometry_field": "way",
-        "host": "localhost",
-        "id": "piers_polygons",
-        "key_field": "",
-        "password": "osm",
-        "port": "5432",
-        "project": "openriverboatmap",
-        "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
-        "table": "( SELECT way, man_made, tags->'mooring' as mooring, name\n  FROM planet_osm_polygon\n  WHERE man_made='pier') AS data",
-        "type": "postgis",
-        "user": "osm",
-        "extent_cache": "auto",
-        "extent": "-20037508,-19929239,20037508,19929239",
-        "extent_from_subquery": "true"
-      },
-      "class": "",
-      "geometry": "polygon",
-      "id": "piers_polygons",
-      "name": "piers_polygons",
-      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
-      "srs-name": "900913",
-      "status": "on",
-      "extent": [
-        -179.99999692067183,
-        -84.96651228427099,
-        179.99999692067183,
-        84.96651228427098
       ],
       "advanced": {
         "extent_from_subquery": "true"

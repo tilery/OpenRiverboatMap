@@ -511,7 +511,7 @@
   text-wrap-width: 50;
   text-label-position-tolerance: 10;
 }
-#piers::symbol[mooring='yes'][zoom>=10][zoom<14] {
+#piers_symbol[mooring='yes'][zoom>=10][zoom<14] {
   marker-file: url('./icons/pier.svg');
 }
 
