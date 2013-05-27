@@ -14,7 +14,7 @@
    id="svg2"
    version="1.1"
    inkscape:version="0.48.4 r9939"
-   sodipodi:docname="anchor.svg">
+   sodipodi:docname="harbour.svg">
   <defs
      id="defs4" />
   <sodipodi:namedview
@@ -25,8 +25,8 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="24.875"
-     inkscape:cx="10.05272"
-     inkscape:cy="9.7846382"
+     inkscape:cx="12.422141"
+     inkscape:cy="7.7684439"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="true"
@@ -38,7 +38,8 @@
      fit-margin-top="0"
      fit-margin-left="0"
      fit-margin-right="0"
-     fit-margin-bottom="0">
+     fit-margin-bottom="0"
+     inkscape:snap-grids="false">
     <inkscape:grid
        type="xygrid"
        id="grid3769"
@@ -73,28 +74,6 @@
        height="18"
        x="0"
        y="1034.3622" />
-    <path
-       style="fill:none;stroke:#444444;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
-       d="M 9.042573,1040.0169 9,1048.322"
-       id="path2985"
-       inkscape:connector-curvature="0"
-       sodipodi:nodetypes="cc" />
-    <path
-       style="fill:none;stroke:#444444;stroke-width:2;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
-       d="m 5,1044.5684 c 0,0 1.142857,3.7538 3.9999998,3.7538 2.8571432,0 4.0000002,-3.7538 4.0000002,-3.7538"
-       id="path3765"
-       inkscape:connector-curvature="0"
-       sodipodi:nodetypes="csc" />
-    <path
-       sodipodi:type="arc"
-       style="fill:#444444;fill-opacity:1;stroke:none"
-       id="path3767"
-       sodipodi:cx="11.618091"
-       sodipodi:cy="4.1005025"
-       sodipodi:rx="2.8140705"
-       sodipodi:ry="2.8140705"
-       d="m 14.432161,4.1005025 c 0,1.5541682 -1.259902,2.8140705 -2.81407,2.8140705 -1.554169,0 -2.8140708,-1.2599023 -2.8140708,-2.8140705 0,-1.5541682 1.2599018,-2.8140705 2.8140708,-2.8140705 1.554168,0 2.81407,1.2599023 2.81407,2.8140705 z"
-       transform="matrix(0.71071426,0,0,0.71071426,0.74285732,1036.5258)" />
     <rect
        style="fill:none;stroke:#83b295;stroke-width:2;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
        id="rect3792"
@@ -102,5 +81,16 @@
        height="16"
        x="1"
        y="1035.3622" />
+    <g
+       transform="scale(0.99155525,1.0085167)"
+       style="font-size:16.55833244px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#444444;fill-opacity:1;stroke:none;font-family:Sans"
+       id="text4541">
+      <path
+         d="m 5.0425834,1040.5006 0,-10.936 3.8404335,0 c 1.4553151,10e-5 2.4039691,0.059 2.8459631,0.1779 0.679142,0.1779 1.247795,0.566 1.705961,1.1643 0.458147,0.5929 0.687225,1.361 0.687236,2.3042 -1.1e-5,0.7277 -0.132068,1.3395 -0.396171,1.8354 -0.264124,0.4958 -0.601004,0.8866 -1.010641,1.1723 -0.404265,0.2803 -0.816605,0.4662 -1.237024,0.5579 -0.571356,0.1132 -1.398732,0.1698 -2.4821324,0.1698 l -1.5604288,0 0,3.5542 -2.3931964,0 m 2.3931964,-8.9308 0,3.3634 1.30979,0 c 0.9432585,0 1.5738972,-0.062 1.8919182,-0.186 0.318008,-0.124 0.565952,-0.318 0.743832,-0.5821 0.183255,-0.2641 0.274886,-0.5714 0.274894,-0.9217 -8e-6,-0.4312 -0.126675,-0.787 -0.380001,-1.0673 -0.253341,-0.2802 -0.57405,-0.4554 -0.962129,-0.5255 -0.285681,-0.054 -0.859724,-0.081 -1.7221315,-0.081 l -1.1561727,0"
+         style="font-variant:normal;font-weight:bold;font-stretch:normal;fill:#444444;font-family:Arial;-inkscape-font-specification:Arial Bold"
+         id="path4546"
+         inkscape:connector-curvature="0"
+         sodipodi:nodetypes="cccccccccscccccscccccsc" />
+    </g>
   </g>
 </svg>

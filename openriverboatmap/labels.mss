@@ -471,23 +471,14 @@
 #marinas[harbour=true][zoom>=7][zoom<18],
 #marinas[harbour=null][zoom>=10][zoom<18] {
   ::symbol {
-    text-face-name:@sans;
-    text-placement: point;
-    text-min-distance: 10;
-    text-fill:@harbour_text;
-    text-halo-fill:@harbour_halo;
-    text-halo-radius:2;
-    text-size:12;
-    text-name:"'⚓'";
-  	[harbour!=true] {
-      text-name:"'⚑'";
-  	}
-/*    marker-fill: @harbour_text;
-    marker-line-width: 2;*/
+    marker-file: url('./icons/harbour.svg');
+    [harbour!=true] {
+      marker-file: url('./icons/marina.svg');
+	}
   }
   ::label {
-    text-dy: 10;
-    text-dx: 10;
+    text-dy: 12;
+    text-dx: 12;
     text-name:"''";
     text-face-name:@sans;
     text-placement: point;
@@ -495,7 +486,7 @@
     text-halo-fill:@harbour_halo;
     text-halo-radius:2;
     text-size:12;
-    text-label-position-tolerance: 10;
+    text-label-position-tolerance: 24;
     text-placement-type: simple;
     text-placements: "E,W,N,S,NE,NW,SE,SW";
     text-min-distance: 2;
@@ -521,14 +512,7 @@
   text-label-position-tolerance: 10;
 }
 #piers::symbol[mooring='yes'][zoom>=10][zoom<14] {
-  text-name:"'P'";
-  text-face-name:@sans;
-  text-placement:point;
-  text-fill:@harbour_text;
-  text-halo-fill:@harbour_halo;
-  text-halo-radius:2;
-  text-size:12;
-  text-label-position-tolerance: 10;
+  marker-file: url('./icons/pier.svg');
 }
 
 /* ================================================================== */
