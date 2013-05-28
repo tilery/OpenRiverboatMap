@@ -468,12 +468,12 @@
 /* WATERWAY POIS
 /* ================================================================== */
 
-#marinas[harbour=true][zoom>=7][zoom<18],
-#marinas[harbour=null][zoom>=10][zoom<18] {
+#marinas[seasonal='no'][zoom>=7][zoom<18],
+#marinas[seasonal='yes'][zoom>=10][zoom<18] {
   ::symbol {
     marker-file: url('./icons/harbour.svg');
-    [harbour!=true] {
-      marker-file: url('./icons/marina.svg');
+    [seasonal='yes'] {
+      marker-file: url('./icons/seasonal.svg');
 	}
   }
   ::label {
@@ -490,13 +490,12 @@
     text-placement-type: simple;
     text-placements: "E,W,N,S,NE,NW,SE,SW";
     text-min-distance: 2;
-    [harbour=true][zoom>=7][zoom<=14] {
+    [zoom>=7][zoom<=14] {
       text-name:"[name].replace('[Hh]alte ([Nn]autique )?(de |du |d\')','').replace('[Pp]ort (de [Pp]laisance )?(de |du |d\')','')";
-    }
-    [harbour!=true][zoom>=10][zoom<=14] {
-      text-name:"[name].replace('[Hh]alte ([Nn]autique )?(de |du |d\')','').replace('[Pp]ort (de [Pp]laisance )?(de |du |d\')','')";
-      text-fill:@marina_text;
-      text-halo-fill:@marina_halo;
+      [seasonal='yes'] {
+        text-fill:@marina_text;
+        text-halo-fill:@marina_halo;
+      }
     }
   }
 }
@@ -511,7 +510,7 @@
   text-wrap-width: 50;
   text-label-position-tolerance: 10;
 }
-#piers_symbol[mooring='yes'][zoom>=10][zoom<14] {
+#piers_symbol[mooring='yes'][zoom>=10][zoom<=14] {
   marker-file: url('./icons/pier.svg');
 }
 
