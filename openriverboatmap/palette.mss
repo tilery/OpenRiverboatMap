@@ -107,7 +107,7 @@ Map { font-directory: url(./fonts); }
 @cycle_fill:        #FAFAF5;
 @cycle_case:        @land;
 
-@rail_line:         #999;
+@rail_line:         #666;
 @rail_fill:         #fff;
 @rail_case:         @land;
 

@@ -131,9 +131,9 @@ Map {buffer-size: 256;}
 }
 
 /* ================================================================== */
-/* Markers generic rules
+/* Stations
 /* ================================================================== */
 
-.marker {
-  marker-fill: #fff;
+.stations[railway='station'][zoom>=14] {
+  marker-file: url('./icons/station.svg');
 }
