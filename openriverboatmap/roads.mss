@@ -82,7 +82,7 @@ come in as well.
     [bridge=1] { line-color: @secondary_case * 0.8; }
   }
   [stylegroup='railway'] {
-    line-color: fadeout(@rail_line,50%);
+    line-color: fadeout(@land,50%);
     [bridge=1] { line-color: @secondary_case * 0.8; }
   }
   [tunnel=1] { line-dasharray: 3,3; }        
@@ -112,7 +112,7 @@ come in as well.
     /* No minor bridges yet */
     [stylegroup='service']  { line-width: 0; }
     [stylegroup='noauto']   { line-width: 0; }
-    [stylegroup='railway'] { line-width: 1; }
+    [stylegroup='railway'] { line-width: 0; }
   }
   [zoom=14] {
     [stylegroup='motorway'] { line-width: @rdz14_maj + 2; }
@@ -121,7 +121,7 @@ come in as well.
     /* No minor bridges yet */
     [stylegroup='service']  { line-width: 0; }
     [stylegroup='noauto']   { line-width: 0; }
-    [stylegroup='railway'] { line-width: 2; }
+    [stylegroup='railway'] { line-width: 0; }
   }
   [zoom=15] {
     [stylegroup='motorway'] { line-width: @rdz15_maj + 2.5; }
@@ -189,10 +189,9 @@ come in as well.
   }
   [stylegroup='railway'] {
     line-color: @rail_line;
-    // line-dasharray: 1,1;
+    line-dasharray: 1,1;
     [type='subway'] { line-opacity: 0.67; }
-    [zoom<13] {  line-opacity: 0.7; }
-    [zoom>=13] { line-dasharray: 8,4; } 
+    [zoom>=16] { line-dasharray: 1,2; } 
   }
   [stylegroup='noauto'],
   [stylegroup='service'],
@@ -285,7 +284,7 @@ come in as well.
     line-join: round;
   }
   [stylegroup='railway'] {
-    line-color: @rail_line;
+    line-color: @land;
     line-join: round;
   }
   /* -- widths -- */
