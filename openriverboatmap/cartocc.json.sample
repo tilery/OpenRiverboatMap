@@ -1,0 +1,12 @@
+[
+    {
+        "if": {
+            "Datasource.type": "postgis"
+        },
+        "then": {
+            "Datasource.dbname": "orbm",
+            "Datasource.password": "",
+            "Datasource.user": "ybon"
+        }
+    }
+]
