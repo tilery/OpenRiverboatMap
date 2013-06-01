@@ -61,11 +61,11 @@ Map {buffer-size: 256;}
 #buildings[zoom>=12][zoom<=16] {
   polygon-fill:@building;
   [zoom>=14] {
-    line-color:darken(@building,5);
+    line-color:darken(@building,5%);
     line-width:0.2;
   }
   [zoom>=16] {
-    line-color:darken(@building,10);
+    line-color:darken(@building,10%);
     line-width:0.4;
   }
 }
@@ -126,7 +126,7 @@ Map {buffer-size: 256;}
 
 #barrier_lines[zoom>=17][stylegroup = 'hedge'] {
   line-width:3;
-  line-color:darken(@park,5);
+  line-color:darken(@park,5%);
 
 }
 
