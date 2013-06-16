@@ -30,7 +30,7 @@ Getting involved
     CREATE INDEX idx_planet_osm_polygon_waterway ON planet_osm_polygon USING btree(waterway,way_area) WHERE waterway IS NOT NULL;
     CREATE INDEX idx_planet_osm_polygon_natural ON planet_osm_polygon USING btree("natural",way_area) WHERE "natural" IS NOT NULL;
     CREATE INDEX idx_planet_osm_polygon_area_100000 ON planet_osm_polygon USING btree(way_area) WHERE way_area > 100000;
-    CREATE INDEX idx_planet_osm_polygon_area_100000 ON planet_osm_polygon USING btree(way_area) WHERE way_area > 10000;
+    CREATE INDEX idx_planet_osm_polygon_area_10000 ON planet_osm_polygon USING btree(way_area) WHERE way_area > 10000;
     CREATE INDEX idx_planet_osm_line_man_made ON planet_osm_line USING btree(man_made) WHERE man_made IS NOT NULL;
     CREATE INDEX idx_planet_osm_polygon_man_made ON planet_osm_polygon USING btree(man_made) WHERE man_made IS NOT NULL;
 
