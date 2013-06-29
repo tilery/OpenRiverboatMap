@@ -491,7 +491,7 @@
     text-placements: "E,W,N,S,NE,NW,SE,SW";
     text-min-distance: 2;
     [zoom>=7][zoom<=14] {
-      text-name:"[name].replace('[Hh]alte ([Nn]autique )?(de |du |d\')','').replace('[Pp]ort (de [Pp]laisance )?(de |du |d\')','')";
+      text-name:"[name].replace('[Hh]alte ([Nn]autique )?(de |du |d\'|des )','').replace('[Pp]ort (de [Pp]laisance )?(de |du |d\'|des )','')";
       [seasonal='yes'] {
         text-fill:@marina_text;
         text-halo-fill:@marina_halo;
