@@ -35,6 +35,18 @@ Map { background-color: @water; }
     [type='river'] { line-width: 6; }
   }
 }
+#waterway_network_high[zoom>=13] {
+  line-color: @water;
+  [navigable='yes'] {
+    line-color: @navigable;
+  }
+  [type='canal'] { line-width: 6; }
+  [type='river'] { line-width: 4; }
+  [zoom>=15] {
+    [type='canal'] { line-width: 8; }
+    [type='river'] { line-width: 6; }
+  }
+}
 
 /* ================================================================== */
 /* WATER AREAS
