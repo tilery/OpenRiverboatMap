@@ -179,7 +179,7 @@
         "type": "postgis",
         "user": "osm",
         "extent_cache": "auto",
-        "extent": "110748.97,5546700.02,1530619.2,6916105.36",
+        "extent": "-20037508,-19929239,20037508,19929239",
         "extent_from_subquery": "true"
       },
       "class": "",
@@ -612,7 +612,7 @@
         "type": "postgis",
         "user": "osm",
         "extent_cache": "auto",
-        "extent": "110748.97,5546700.02,1530619.2,6916105.36",
+        "extent": "-20037508,-19929239,20037508,19929239",
         "extent_from_subquery": "true"
       },
       "class": "",
