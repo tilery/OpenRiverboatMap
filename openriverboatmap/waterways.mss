@@ -59,6 +59,10 @@ Map { background-color: @water; }
 }
 
 #navigable_water[zoom>=13] {
+  ::bridge[bridge='yes'] {
+    line-color: @navigable * 0.8;
+    line-width: 2;
+  }
 	polygon-fill: @navigable;
 }
 /* ================================================================== */
