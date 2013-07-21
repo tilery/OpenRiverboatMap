@@ -245,7 +245,7 @@
         "port": "5432",
         "project": "foss4g-2011",
         "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
-        "table": "( SELECT p.way, p.way_area AS area, p.bridge from planet_osm_polygon p, planet_osm_line l WHERE ST_Intersects(p.way, l.way) AND p.waterway IN ('riverbank', 'lock') AND (l.tags ? 'CEMT' OR l.tags->'motorboat'='yes') and ST_IsValid(l.way) = true AND ST_IsValid(p.way) = true AND p.layer = l.layer ORDER BY p.layer DESC) AS data",
+        "table": "( SELECT p.way, p.way_area AS area, p.bridge from planet_osm_polygon p, planet_osm_line l WHERE ST_Intersects(p.way, l.way) AND p.waterway IN ('riverbank', 'lock') AND (l.tags ? 'CEMT' OR l.tags->'motorboat'='yes') and ST_IsValid(l.way) = true AND ST_IsValid(p.way) = true AND ((p.layer IS NULL and l.layer IS NULL) OR p.layer = l.layer) ORDER BY p.layer DESC) AS data",
         "type": "postgis",
         "user": "osm",
         "extent_cache": "auto",
