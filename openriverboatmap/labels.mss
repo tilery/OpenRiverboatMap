@@ -603,4 +603,23 @@
   text-label-position-tolerance: 10;
 }
 
-/* ****************************************************************** */
+
+/* ================================================================== */
+/* Stations
+/* ================================================================== */
+
+.stations[railway='station'][zoom>=14] {
+  ::symbol {
+    marker-file: url('./icons/station.svg');
+  }
+  text-name: "[name]";
+  text-face-name:@sans_bold_italic;
+  text-fill: @other_text;
+  text-size:11;
+  text-halo-fill:@other_halo;
+  text-halo-radius:1;
+  text-label-position-tolerance: 24;
+  text-placement-type: simple;
+  text-placements: "E,W";
+  text-dx: 12;
+}

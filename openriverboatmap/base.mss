@@ -117,11 +117,3 @@ Map {buffer-size: 256;}
   line-color:darken(@park,5%);
 
 }
-
-/* ================================================================== */
-/* Stations
-/* ================================================================== */
-
-.stations[railway='station'][zoom>=14] {
-  marker-file: url('./icons/station.svg');
-}
