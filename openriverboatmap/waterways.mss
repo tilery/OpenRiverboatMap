@@ -108,3 +108,18 @@ Map { background-color: @water; }
     line-width: 2;
   }
 }
+
+/* ================================================================== */
+/* DAMS
+/* ================================================================== */
+#dams[zoom>=14] {
+  line-cap: butt;
+  line-color: @land;
+  line-width: 3;
+  [zoom>16] {
+    line-width: 4;
+  }
+}
+#dams_polygons[zoom>=14] {
+  polygon-fill: @land;
+}
