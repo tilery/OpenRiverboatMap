@@ -136,7 +136,7 @@
 
 /* ---- Towns ------------------------------------------------------- */
 
-#place::town[type='town'][zoom>=12][zoom<=17] {
+#place::town[type='town'][zoom>=10][zoom<=17] {
   text-name:'[name]';
   text-face-name:@sans;
   text-placement:point;
@@ -145,9 +145,11 @@
   text-halo-fill:@town_halo;
   text-halo-radius:1;
   text-wrap-width: 50;
-  text-min-distance: 50;
+  text-min-distance: 10;
+  text-label-position-tolerance: 30;
   [zoom>=10] {
     text-halo-radius:2;
+    text-fill: lighten(@town_text,5%);
     text-size: 10;
   }
   [zoom>=11]{ text-size:11; }
