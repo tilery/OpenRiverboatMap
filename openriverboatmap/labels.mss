@@ -87,7 +87,7 @@
 
 /* ---- Cities ------------------------------------------------------ */
 
-#place::city[type='city'][zoom>=8][zoom<=15] {
+#place::city[type='city'][zoom>=8][zoom<=16] {
   text-name:'[name]';
   text-face-name:@sans_italic;
   text-placement:point;
@@ -185,8 +185,8 @@
 /* ---- Other small places ------------------------------------------ */
 
 #place::small[type='village'][zoom>=12],
-#place::small[type='suburb'][zoom>=12],
-#place::small[type='hamlet'][zoom>=12] {
+#place::small[type='suburb'][zoom>=13],
+#place::small[type='hamlet'][zoom>=13] {
   text-name:'[name]';
   text-face-name:@sans;
   text-placement:point;
@@ -194,12 +194,9 @@
   text-size:10;
   text-halo-fill:@other_halo;
   text-halo-radius:1;
-  text-wrap-width: 30;
-  text-min-distance: 100;
   [zoom>=14] {
     text-size:11;
     text-character-spacing: 1;
-    text-wrap-width: 40;
     text-line-spacing: 1;
   }
   [zoom>=15] {
