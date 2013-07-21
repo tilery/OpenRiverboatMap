@@ -186,7 +186,7 @@
 
 /* ---- Other small places ------------------------------------------ */
 
-#place::small[type='village'][zoom>=12],
+#place::small[type='village'][zoom>=11],
 #place::small[type='suburb'][zoom>=13],
 #place::small[type='hamlet'][zoom>=13] {
   text-name:'[name]';
@@ -196,6 +196,7 @@
   text-size:10;
   text-halo-fill:@other_halo;
   text-halo-radius:1;
+  text-min-distance: 10;
   [zoom>=14] {
     text-size:11;
     text-character-spacing: 1;
