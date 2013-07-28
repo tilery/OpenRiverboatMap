@@ -58,7 +58,7 @@ Map {buffer-size: 256;}
 }
 
 /* ---- BUILDINGS ---- */
-#buildings[zoom>=12] {
+#buildings[zoom>=13] {
   polygon-fill:@building;
   [zoom>=14] {
     line-color:darken(@building,5%);
