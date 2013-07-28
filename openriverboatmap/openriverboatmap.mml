@@ -175,7 +175,7 @@
         "port": "5432",
         "project": "openriverboatmap",
         "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
-        "table": "( SELECT way, waterway as type, tags->'motorboat' AS motorboat, tags->'CEMT' AS cemt, CASE WHEN tags->'motorboat'='yes' THEN 'yes' WHEN tags ? 'CEMT' THEN 'yes' ELSE 'no' END as navigable, CAST(tags->'draft' AS FLOAT) AS draft, CAST(tags->'maxspeed' AS INTEGER) AS maxspeed  FROM planet_osm_line WHERE waterway IN ('river', 'canal', 'stream')) AS data",
+        "table": "( SELECT way, waterway as type, tags->'motorboat' AS motorboat, tags->'CEMT' AS cemt, CASE WHEN tags->'motorboat'='yes' THEN 'yes' WHEN tags ? 'CEMT' THEN 'yes' ELSE 'no' END as navigable, CAST(tags->'draft' AS FLOAT) AS draft, CAST(tags->'maxspeed' AS INTEGER) AS maxspeed, CASE WHEN layer ~ E'^-?\\\\d+$' THEN layer::integer ELSE 0 END AS layer FROM planet_osm_line WHERE waterway IN ('river', 'canal', 'stream') ORDER BY layer) AS data",
         "type": "postgis",
         "user": "osm",
         "extent_cache": "auto",
