@@ -40,11 +40,13 @@ Map { background-color: @water; }
   [navigable='yes'] {
     line-color: @navigable;
   }
-  [type='canal'] { line-width: 6; }
-  [type='river'] { line-width: 4; }
+  [type='stream'] { line-width: 1; }
+  [type='canal'] { line-width: 4; }
+  [type='river'] { line-width: 6; }
   [zoom>=15] {
-    [type='canal'] { line-width: 8; }
-    [type='river'] { line-width: 6; }
+    [type='stream'] { line-width: 2; }
+    [type='canal'] { line-width: 6; }
+    [type='river'] { line-width: 8; }
   }
 }
 
