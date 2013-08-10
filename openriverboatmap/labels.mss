@@ -95,6 +95,7 @@
   text-halo-fill:@city_halo;
   text-halo-radius:2;
   text-transform: uppercase;
+  text-label-position-tolerance: 50;
   [zoom<=8] {
     text-size: 9;
     text-halo-radius:1;
@@ -138,7 +139,7 @@
 
 #place::town[type='town'][zoom>=10][zoom<=17] {
   text-name:'[name]';
-  text-face-name:@sans;
+  text-face-name: @sans_lt_italic;
   text-placement:point;
   text-fill:@town_text;
   text-size:9;
@@ -146,7 +147,7 @@
   text-halo-radius:1;
   text-wrap-width: 50;
   text-min-distance: 10;
-  text-label-position-tolerance: 30;
+  text-label-position-tolerance: 50;
   [zoom>=10] {
     text-halo-radius:2;
     text-fill: lighten(@town_text,5%);
@@ -190,7 +191,7 @@
 #place::small[type='suburb'][zoom>=13],
 #place::small[type='hamlet'][zoom>=13] {
   text-name:'[name]';
-  text-face-name:@sans;
+  text-face-name: @sans_lt_italic;
   text-placement:point;
   text-fill:@other_text;
   text-size:10;
@@ -230,7 +231,7 @@
 
 #place::small[type='locality'][zoom>=15] {
   text-name:'[name]';
-  text-face-name:@sans;
+  text-face-name: @sans_lt_italic;
   text-placement:point;
   text-fill:@locality_text;
   text-size:9;
@@ -412,7 +413,7 @@
   text-name: "[name]";
   text-face-name: @sans_italic;
   text-placement: line;
-  text-size: 10;
+  text-size: 11;
   [navigable='yes'] {
     text-fill: @navigable_text;
     text-halo-fill: fadeout(#fff,25%);
@@ -470,33 +471,26 @@
 
 #marinas[seasonal='no'][zoom>=7][zoom<18],
 #marinas[seasonal='yes'][zoom>=10][zoom<18] {
-  ::symbol {
-    marker-file: url('./icons/harbour.svg');
-    [seasonal='yes'] {
-      marker-file: url('./icons/seasonal.svg');
-	}
-  }
-  ::label {
-    text-dy: 12;
-    text-dx: 12;
-    text-name:"''";
-    text-face-name:@sans;
-    text-placement: point;
-    text-fill:@harbour_text;
-    text-halo-fill:@harbour_halo;
-    text-halo-radius:2;
-    text-size:12;
-    text-label-position-tolerance: 24;
-    text-placement-type: simple;
-    text-placements: "E,W,N,S,NE,NW,SE,SW";
-    text-min-distance: 2;
-    [zoom>=7][zoom<=14] {
-      text-name:"[name].replace('[Hh]alte ([Nn]autique )?(de |du |d\'|des )','').replace('[Pp]ort (de [Pp]laisance )?(de |du |d\'|des )','')";
-      [seasonal='yes'] {
-        text-fill:@marina_text;
-        text-halo-fill:@marina_halo;
-      }
-    }
+  shield-file: url('./icons/harbour.svg');
+  // [seasonal='yes'] {
+  //   shield-file: url('./icons/seasonal.svg');
+  // }
+  shield-text-dy: 3;
+  shield-text-dx: 3;
+  shield-face-name: @sans_bold;
+  shield-fill: @harbour_text;
+  shield-halo-fill: @harbour_halo;
+  shield-halo-radius: 2;
+  shield-size: 10;
+  shield-placement-type: simple;
+  shield-placements: "NE,NW,SE,SW,E,W,N,S";
+  shield-min-distance: 5;
+  shield-unlock-image: true;
+  shield-name:"[name].replace('[Hh]alte ([Nn]autique )?(de |du |d\'|des )','').replace('[Pp]ort (de [Pp]laisance )?(de |du |d\'|des )','')";
+  [seasonal='yes'] {
+    shield-face-name: @sans;
+    shield-fill:@marina_text;
+    shield-halo-fill:@marina_halo;
   }
 }
 #locks::label[zoom>=16] {

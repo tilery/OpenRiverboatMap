@@ -6,17 +6,16 @@ Map { background-color: @water; }
     line-color: @navigable_medium;
   }
   [zoom=5] {
-    [type='river'] { line-width: 0.5; }
-    [type='canal'] { line-width: 0.25; } }
+      line-width: 0.5;
+  }
   [zoom=6] {
-    [type='river'] { line-width: 1; }
-    [type='canal'] { line-width: 0.5; } }
+      line-width: 1;
+  }
   [zoom=7] {
-    [type='river'] { line-width: 2; }
-    [type='canal'] { line-width: 1; } }
+      line-width: 2;
+  }
   [zoom=8] {
-    [type='canal'] { line-width: 3; }
-    [type='river'] { line-width: 2; }
+      line-width: 3;
   }
   [zoom=9] {
     [type='canal'] { line-width: 4; }
