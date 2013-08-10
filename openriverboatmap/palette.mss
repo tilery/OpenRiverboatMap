@@ -38,22 +38,23 @@ Map { font-directory: url(./fonts); }
 /* ================================================================== */
 
 @land:              #fefef3;
-@water:             #C4DFF6;
+@water:             #b3dcdb;
 @grass:             #E6F2C1;
 @beach:             #EEE5B2;
 @park:              #DAF2C1;
 @cemetery:          #D6DED2;
-@wooded:            #d4e4c4;
 @wetland:           #e3e9e2; //#CFDCD3;
-@heath:             #E1E9D6;
+@agriculture:       #f1f1d9;
+@wooded:            #dfecce;
+@heath:             #e7f1da;
 
 @building:          #E4E0E0;
 @hospital:          rgb(229,198,195);
 @school:            #FFF5CC;
 @sports:            #B8E6B8;
-@military:          #D1BFAA;
+@military:          #e9e0d6;
 
-@residential:       @land * 0.98;
+@residential:       #F1F0ED;
 @commercial:        @land * 0.97;
 @industrial:        @land * 0.96;
 @parking:           #EEE;
@@ -61,11 +62,10 @@ Map { font-directory: url(./fonts); }
 
 @mooring:           #13272e; //#13272e #252305
 @stone:             #ceba82;
-@agriculture:       #F2E8B6;
-@navigable:         #83B295; //#387084;
-@navigable_high:   darken(@navigable, 20%);
-@navigable_medium:   darken(@navigable, 10%);
-@navigable_text:   darken(@navigable, 20%);
+@navigable:         #3A8F8C; //#387084;
+@navigable_high:    @navigable;
+@navigable_medium:  @navigable;
+@navigable_text:    darken(@navigable, 10%);
 
 
 
