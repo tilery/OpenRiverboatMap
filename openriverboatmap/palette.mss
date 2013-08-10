@@ -40,10 +40,25 @@ Map { font-directory: url(./fonts); }
 @land:              #fefef3;
 @water:             #C4DFF6;
 @grass:             #E6F2C1;
-@beach:             #FFEEC7;
+@beach:             #EEE5B2;
 @park:              #DAF2C1;
 @cemetery:          #D6DED2;
 @wooded:            #d4e4c4;
+@wetland:           #e3e9e2; //#CFDCD3;
+@heath:             #E1E9D6;
+
+@building:          #E4E0E0;
+@hospital:          rgb(229,198,195);
+@school:            #FFF5CC;
+@sports:            #B8E6B8;
+@military:          #D1BFAA;
+
+@residential:       @land * 0.98;
+@commercial:        @land * 0.97;
+@industrial:        @land * 0.96;
+@parking:           #EEE;
+
+
 @mooring:           #13272e; //#13272e #252305
 @stone:             #ceba82;
 @agriculture:       #F2E8B6;
@@ -52,15 +67,7 @@ Map { font-directory: url(./fonts); }
 @navigable_medium:   darken(@navigable, 10%);
 @navigable_text:   darken(@navigable, 20%);
 
-@building:          #E4E0E0;
-@hospital:          rgb(229,198,195);
-@school:            #FFF5CC;
-@sports:            #B8E6B8;
 
-@residential:       @land * 0.98;
-@commercial:        @land * 0.97;
-@industrial:        @land * 0.96;
-@parking:           #EEE;
 
 /* ================================================================== */
 /* ROAD COLORS
