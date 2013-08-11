@@ -513,6 +513,12 @@
 }
 #piers_symbol[mooring='yes'][zoom>=10][zoom<=14] {
   marker-file: url('./icons/pier.svg');
+  [zoom<=11] {
+    marker-transform: scale(.6,.6);
+  }
+  [zoom=12] {
+    marker-transform: scale(.8,.8);
+  }
 }
 
 /* ================================================================== */
