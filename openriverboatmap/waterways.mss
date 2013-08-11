@@ -66,21 +66,6 @@ Map { background-color: @water; }
   }
 	polygon-fill: @navigable;
 }
-/* ================================================================== */
-/* MARINAS
-/* ================================================================== */
-
-/*#marinas[harbour=1][zoom>=7][zoom<=14] {
-  marker-width: 20;
-  marker-height: 20;
-  marker-file: url("icons/harbour.svg");
-}
-
-#marinas[harbour=0][zoom>=10][zoom<=14] {
-  marker-file: url("icons/marina.svg");
-  marker-width: 20;
-  marker-height: 20;
-}*/
 
 /* ================================================================== */
 /* MOORING

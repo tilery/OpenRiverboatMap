@@ -493,23 +493,21 @@
     shield-halo-fill:@marina_halo;
   }
 }
-#locks::label[zoom>=16] {
-  ::symbol {
-    marker-file: url('./icons/lock.svg');
-  }
-  text-dy: 12;
-  text-dx: 12;
-  text-name: "[lock_name]";
-  text-face-name:@sans;
-  text-placement:point;
-  text-fill:@marina_text;
-  text-size:11;
-  text-halo-fill:@marina_halo;
-  text-halo-radius:2;
-  text-wrap-width: 50;
-  text-label-position-tolerance: 24;
-  text-placement-type: simple;
-  text-placements: "E,W,N,S,NE,NW,SE,SW";
+#locks::label[zoom>=14] {
+  shield-file: url('./icons/lock.svg');
+  shield-text-dy: 4;
+  shield-text-dx: 6;
+  shield-name: "[lock_name]";
+  shield-face-name: @sans;
+  shield-placement: point;
+  shield-fill: @marina_text;
+  shield-size: 10;
+  shield-halo-fill: @marina_halo;
+  shield-halo-radius: 2;
+  shield-wrap-width: 50;
+  shield-placement-type: simple;
+  shield-placements: "E,W,N,S,NE,NW,SE,SW";
+  shield-unlock-image: true;
 }
 #piers_symbol[mooring='yes'][zoom>=10][zoom<=14] {
   marker-file: url('./icons/pier.svg');
