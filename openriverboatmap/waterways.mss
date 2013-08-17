@@ -1,4 +1,7 @@
-Map { background-color: @water; }
+Map {
+  background-color: @water;
+  buffer-size: 256;
+}
 
 #waterway_network[zoom>=5][zoom<=12][navigable='yes'] {
   line-color: @navigable_high;
