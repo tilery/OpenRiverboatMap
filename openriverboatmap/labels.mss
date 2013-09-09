@@ -622,8 +622,8 @@
 /* ================================================================== */
 
 #bridge_label[zoom>=15][zoom<=20] {
-  text-name:'[name]';
-  text-face-name:@sans_italic;
+  text-name: '[name]';
+  text-face-name: @sans_italic;
   text-halo-radius: 1;
   text-fill: @bridge_text;
   text-halo-fill: @bridge_halo;

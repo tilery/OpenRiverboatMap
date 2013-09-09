@@ -20,8 +20,7 @@
     "base.mss",
     "roads.mss",
     "labels.mss",
-    "waterways.mss",
-    "bridge_labels.mss"
+    "waterways.mss"
   ],
   "Layer": [
     {
@@ -1109,7 +1108,7 @@
         "port": "5432",
         "project": "openriverboatmap",
         "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
-        "table": "( SELECT way, amenity AS type, tags->'waste' AS waste FROM planet_osm_point WHERE amenity IS NOT NULL) AS data",
+        "table": "( SELECT way, amenity AS type, tags->'waste' AS waste FROM planet_osm_point WHERE amenity IN ('drinking_water', 'waste_disposal', 'shower', 'toilets') OR (amenity='fuel' AND access='boat')) AS data",
         "type": "postgis",
         "user": "osm",
         "extent_cache": "auto",
