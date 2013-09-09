@@ -518,6 +518,22 @@
     marker-transform: scale(.8,.8);
   }
 }
+#pois[type='drinking_water'][zoom>=15] {
+    marker-file: url('./icons/water_point.svg');
+}
+#pois[type='waste_disposal'][zoom>=15] {
+    marker-file: url('./icons/rubbish.svg');
+	[waste='chemical_toilet'] { marker-file: url('./icons/elsan.svg'); }
+}
+#pois[type='fuel'][zoom>=15] {
+    marker-file: url('./icons/fuel.svg');
+}
+#pois[type='shower'][zoom>=15] {
+    marker-file: url('./icons/shower.svg');
+}
+#pois[type='toilets'][zoom>=15] {
+    marker-file: url('./icons/toilets.svg');
+}
 
 /* ================================================================== */
 /* WATERWAY SIGNS
