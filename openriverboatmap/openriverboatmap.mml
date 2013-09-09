@@ -20,7 +20,8 @@
     "base.mss",
     "roads.mss",
     "labels.mss",
-    "waterways.mss"
+    "waterways.mss",
+    "bridge_labels.mss"
   ],
   "Layer": [
     {
@@ -1003,7 +1004,7 @@
         "port": "5432",
         "project": "foss4g-2011",
         "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
-        "table": "( SELECT way, tags->'lock_name' as lock_name, lock\n  FROM planet_osm_line\n  WHERE lock='yes') AS data",
+        "table": "( SELECT way, CONCAT_WS(' ',tags->'lock_ref', tags->'lock_name') AS lock_name, lock\n  FROM planet_osm_line\n  WHERE lock='yes') AS data",
         "type": "postgis",
         "user": "osm",
         "extent_cache": "auto",
@@ -1027,6 +1028,41 @@
         "extent_from_subquery": "true"
       }
     },
+	{
+	  "Datasource": {
+	    "dbname": "osm",
+	    "geometry_field": "way",
+	    "host": "localhost",
+	    "id": "bridge_name",
+	    "key_field": "",
+	    "password": "osm",
+	    "port": "5432",
+	    "project": "osm-bright-master",
+	    "srs": null,
+	    "table": "( SELECT way, CONCAT_WS(' ',tags->'bridge_ref', tags->'bridge_name') AS bridge_name FROM planet_osm_line WHERE bridge NOT IN ('', '0', 'no')) AS data",
+	    "type": "postgis",
+	    "user": "osm",
+	    "extent_cache": "auto",
+	    "extent": "-20037508,-19929239,20037508,19929239",
+	    "extent_from_subquery": "true"
+	  },
+	  "class": "",
+	  "geometry": "linestring",
+	  "id": "bridge_name",
+	  "name": "bridge_name",
+	  "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+	  "srs-name": "900913",
+	  "status": "on",
+	  "extent": [
+	    -178.15520178944752,
+	    -85.051,
+	    179.2036238941463,
+	    83.32739899296284
+	  ],
+	  "advanced": {
+	    "extent_from_subquery": "true"
+	  }
+	},
     {
       "Datasource": {
         "dbname": "osm",
