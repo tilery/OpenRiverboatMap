@@ -496,8 +496,8 @@
 #locks::label[zoom>=14] {
   shield-file: url('./icons/lock.svg');
   shield-text-dy: 4;
-  shield-text-dx: 6;
-  shield-name: "[lock_name]";
+  shield-text-dx: 8;
+  shield-name: "[name]";
   shield-face-name: @sans;
   shield-placement: point;
   shield-fill: @marina_text;
@@ -508,6 +508,9 @@
   shield-placement-type: simple;
   shield-placements: "E,W,N,S,NE,NW,SE,SW";
   shield-unlock-image: true;
+  [height!=null] {
+    shield-name: "[name] + ' (' + [height] + ')'";
+  }
 }
 #piers_symbol[mooring='yes'][zoom>=10][zoom<=14] {
   marker-file: url('./icons/pier.svg');
