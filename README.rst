@@ -46,7 +46,7 @@ Who use it?
 * http://maps.grade.de/routino/index.html
 * http://www.skipperguide.de -- e.g. http://www.skipperguide.de/wiki/Sa%C3%B4ne
 * https://maposmatic.osm-baustelle.de/ -- for printable output
-
+* As TMS: `http://{switch:a,b,c}.tile.openstreetmap.fr/openriverboatmap/{zoom}/{x}/{y}.png`
 
 Screenshots
 -----------
