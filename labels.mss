@@ -642,7 +642,7 @@
 /* Stations
 /* ================================================================== */
 
-.stations[railway='station'][zoom>=13] {
+.stations[zoom>=13] {
   ::symbol {
     marker-file: url('./icons/station.svg');
   }

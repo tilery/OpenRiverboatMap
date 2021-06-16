@@ -372,16 +372,15 @@ Layer:
     <<: *db
     table: "(SELECT p.way, p.name, p.railway FROM planet_osm_point p, planet_osm_line
       l WHERE p.railway='station' AND l.railway='rail' AND ST_DWithin(l.way, p.way,
-      0.1)) as data"
+      10)) as data"
 
 - id: stations-poly
   class: stations
+  geometry: polygon
   <<: *extents
   Datasource:
     <<: *db
-    table: |-
-      (select way,name,railway,aerialway,disused
-            from planet_osm_polygon where railway in ('station','halt','tram_stop') AND disused IS NULL) as data
+    table: (SELECT way,name,railway,aerialway,disused FROM planet_osm_polygon WHERE railway='station' AND disused IS NULL) AS data
 
 - id: piers_symbol
   class: ''
