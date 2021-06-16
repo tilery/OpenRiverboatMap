@@ -4,7 +4,7 @@
             "Datasource.type": "postgis"
         },
         "then": {
-            "Datasource.dbname": "orbm",
+            "Datasource.dbname": "osm",
             "Datasource.password": "",
             "Datasource.user": "ybon"
         }

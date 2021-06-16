@@ -12,9 +12,8 @@ Map {buffer-size: 256;}
 /* LANDUSE & LANDCOVER
 /* ================================================================== */
 
-#land[zoom>=0][zoom<6],
-#shoreline_300[zoom>=6][zoom<10],
-#processed_p[zoom>=10] {
+#land-low[zoom>=0][zoom<6],
+#land[zoom>=6] {
   polygon-fill: @land;
   polygon-gamma: 0.75;
 }
