@@ -19,17 +19,13 @@ extents: &extents
   extent: *world
   srs-name: "900913"
   srs: *merc
-extents84: &extents84
-  extent: *world
-  srs-name: "WGS84"
-  srs: "+proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs"
 db: &db
   dbname: osm
   geometry_field: way
   type: postgis
   extent: -20037508,-19929239,20037508,19929239
   password: null
-  user: osm
+  user: ybon
   host: ''
 
 Stylesheet:

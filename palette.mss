@@ -44,7 +44,7 @@ Map { font-directory: url(./fonts); }
 @park:              #DAF2C1;
 @cemetery:          #D6DED2;
 @wetland:           #e3e9e2; //#CFDCD3;
-@agriculture:       #f1f1d9;
+@agriculture:       #fafaeb;
 @wooded:            #dfecce;
 @heath:             #e7f1da;
 
