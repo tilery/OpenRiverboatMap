@@ -260,7 +260,7 @@
 // AREA LABELS
 // =====================================================================
 
-#area_label {
+#area_label[type!=null] {
   // Bring in labels gradually as one zooms in, bases on polygon area
   [zoom>=10][area>102400000],
   [zoom>=11][area>25600000],
@@ -330,7 +330,7 @@
     text-wrap-width: 180;
   }
 }
-   
+
 #poi[type='university'][zoom>=15],
 #poi[type='hospital'][zoom>=16],
 #poi[type='school'][zoom>=17],
