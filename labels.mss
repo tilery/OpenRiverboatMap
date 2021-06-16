@@ -486,7 +486,7 @@
   shield-placements: "NE,NW,SE,SW,E,W,N,S";
   shield-min-distance: 5;
   shield-unlock-image: true;
-  shield-name:"[name].replace('[Hh]alte ([Nn]autique )?(de |du |d\'|des )?','').replace('[Pp]ort (de [Pp]laisance )?(de |du |d\'|des )?','')";
+  shield-name:"[name].replace('[Hh]alte ([Nn]autique |[Ff]luviale )?(de |du |d\'|des )','').replace('[Pp]ort (de |du |d\'|des )([Pp]laisance )?','')";
   [seasonal='yes'] {
     shield-face-name: @sans;
     shield-fill:@marina_text;
